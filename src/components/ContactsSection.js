@@ -1,4 +1,14 @@
 'use client';
+/**
+ * ContactsSection Component
+ * 
+ * Displays company contact information with:
+ * - Company details (phone, address, hours)
+ * - Social media links (WhatsApp, Instagram)
+ * - 2GIS Maps integration showing company location
+ * 
+ * All sections are fully responsive for mobile and desktop.
+ */
 import {
   Box,
   Container,
@@ -7,44 +17,19 @@ import {
   Card,
   CardContent,
   Button,
-  TextField,
   useTheme,
-  useMediaQuery,
   Stack,
-  Divider,
 } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import SendIcon from '@mui/icons-material/Send';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import { useState } from 'react';
+import DoubleGisMapComponent from './DoubleGisMapComponent';
 
 const ContactsSection = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    message: '',
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Формируем сообщение для WhatsApp
-    const whatsappMessage = `Здравствуйте! Меня зовут ${formData.name}.%0A%0AТелефон: ${formData.phone}%0A%0AСообщение: ${formData.message}%0A%0AОтправлено с сайта MaxMetall`;
-    window.open(`https://wa.me/996555033377?text=${whatsappMessage}`, '_blank');
-  };
 
   const handlePhoneClick = () => {
     window.open('tel:+996555033377', '_self');
@@ -60,17 +45,22 @@ const ContactsSection = () => {
   };
 
   const handleMapClick = () => {
-    // Координаты для завода Дастан в Бишкеке
-    const address = 'Байтик Баатыра, 36/3, Бишкек, Кыргызстан';
-    window.open(`https://www.google.com/maps/place/MaxMetall+-+%D0%B8%D0%B7%D0%B4%D0%B5%D0%BB%D0%B8%D1%8F+%D0%B8%D0%B7+%D0%BD%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D1%8E%D1%89%D0%B5%D0%B9+%D1%81%D1%82%D0%B0%D0%BB%D0%B8/@42.8487732,74.6069731,18.75z/data=!4m6!3m5!1s0x389eb7c7eca2048b:0x4b557f968a6c7ec8!8m2!3d42.8484948!4d74.6073303!16s%2Fg%2F11rscdf0l_?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D}`, '_blank');
+    // Открыть 2ГИС с красивой ссылкой
+    window.open('https://2gis.kg/bishkek/geo/70000001036008789', '_blank');
   };
 
   return (
-    <Box id="contacts" sx={{ py: { xs: 6, md: 10 }, bgcolor: 'white' }}>
-      <Container maxWidth="lg">
+    <Box 
+      id="contacts"
+      sx={{
+        py: { xs: 8, md: 10 },
+        background: 'linear-gradient(to bottom, #fafafa 0%, #ffffff 100%)'
+      }}
+    >
+      <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2, md: 3 } }}>
         {/* Заголовок секции */}
         <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
-          <Typography
+          <Typography 
             variant="h2"
             sx={{
               fontWeight: 700,
@@ -80,7 +70,7 @@ const ContactsSection = () => {
           >
             Контакты
           </Typography>
-          <Typography
+          <Typography 
             variant="h6"
             sx={{
               color: theme.palette.text.secondary,
@@ -93,20 +83,36 @@ const ContactsSection = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center" alignItems="center">
+        <Grid 
+          container 
+          spacing={{ xs: 3, md: 4 }}
+          justifyContent="center"
+          alignItems="stretch"
+        >
           {/* Контактная информация */}
-          <Grid item xs={12} md={5}>
-            <Stack spacing={3}>
+          <Grid item xs={12} lg={4}>
+            <Stack spacing={4} sx={{ height: '100%' }}>
               {/* Основная информация */}
-              <Card
+              <Card 
                 sx={{
                   p: { xs: 2, md: 3 },
                   background: 'linear-gradient(135deg, rgba(211, 47, 47, 0.02) 0%, rgba(66, 66, 66, 0.02) 100%)',
                   border: '1px solid rgba(211, 47, 47, 0.1)',
+                  height: '100%',
+                  minHeight: 400,
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
               >
-                <CardContent sx={{ p: 0 }}>
-                  <Typography
+                <CardContent 
+                  sx={{
+                    p: 0,
+                    flexGrow: 1,
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}
+                >
+                  <Typography 
                     variant="h5"
                     sx={{
                       fontWeight: 600,
@@ -117,10 +123,10 @@ const ContactsSection = () => {
                     MaxMetall
                   </Typography>
 
-                  <Stack spacing={2.5}>
+                  <Stack spacing={3}>
                     {/* Телефон */}
                     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                      <Box
+                      <Box 
                         sx={{
                           bgcolor: theme.palette.primary.main,
                           color: 'white',
@@ -136,7 +142,7 @@ const ContactsSection = () => {
                         <PhoneIcon sx={{ fontSize: '1.2rem' }} />
                       </Box>
                       <Box>
-                        <Typography
+                        <Typography 
                           variant="h6"
                           sx={{
                             color: theme.palette.primary.main,
@@ -147,9 +153,11 @@ const ContactsSection = () => {
                         >
                           +996 555 033 377
                         </Typography>
-                        <Typography
+                        <Typography 
                           variant="body2"
-                          sx={{ color: theme.palette.text.secondary }}
+                          sx={{
+                            color: theme.palette.text.secondary
+                          }}
                         >
                           Основной номер для заказов
                         </Typography>
@@ -158,7 +166,7 @@ const ContactsSection = () => {
 
                     {/* Адрес */}
                     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                      <Box
+                      <Box 
                         sx={{
                           bgcolor: theme.palette.primary.main,
                           color: 'white',
@@ -174,7 +182,7 @@ const ContactsSection = () => {
                         <LocationOnIcon sx={{ fontSize: '1.2rem' }} />
                       </Box>
                       <Box>
-                        <Typography
+                        <Typography 
                           variant="body1"
                           sx={{
                             color: theme.palette.text.primary,
@@ -184,7 +192,7 @@ const ContactsSection = () => {
                         >
                           Байтик Баатыра, 36/3
                         </Typography>
-                        <Typography
+                        <Typography 
                           variant="body2"
                           sx={{
                             color: theme.palette.text.secondary,
@@ -193,7 +201,7 @@ const ContactsSection = () => {
                         >
                           завод Дастан, Бишкек, Кыргызстан
                         </Typography>
-                        <Button
+                        <Button 
                           startIcon={<DirectionsCarIcon />}
                           onClick={handleMapClick}
                           sx={{
@@ -204,14 +212,14 @@ const ContactsSection = () => {
                             fontWeight: 600,
                           }}
                         >
-                          Показать на карте
+                          Открыть в 2ГИС
                         </Button>
                       </Box>
                     </Box>
 
                     {/* График работы */}
                     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                      <Box
+                      <Box 
                         sx={{
                           bgcolor: theme.palette.primary.main,
                           color: 'white',
@@ -227,7 +235,7 @@ const ContactsSection = () => {
                         <ScheduleIcon sx={{ fontSize: '1.2rem' }} />
                       </Box>
                       <Box>
-                        <Typography
+                        <Typography 
                           variant="body1"
                           sx={{
                             color: theme.palette.text.primary,
@@ -237,11 +245,14 @@ const ContactsSection = () => {
                         >
                           Работаем по предварительному звонку
                         </Typography>
-                        <Typography
+                        <Typography 
                           variant="body2"
-                          sx={{ color: theme.palette.text.secondary }}
+                          sx={{
+                            color: theme.palette.text.secondary
+                          }}
                         >
-                          Понедельник - Суббота: 9:00 - 18:00<br />
+                          Понедельник - Суббота: 9:00 - 18:00
+                          <br />
                           Воскресенье: по договоренности
                         </Typography>
                       </Box>
@@ -251,9 +262,14 @@ const ContactsSection = () => {
               </Card>
 
               {/* Социальные сети */}
-              <Card sx={{ p: { xs: 2, md: 3 } }}>
+              <Card 
+                sx={{
+                  p: { xs: 2, md: 3 },
+                  minHeight: 120
+                }}
+              >
                 <CardContent sx={{ p: 0 }}>
-                  <Typography
+                  <Typography 
                     variant="h6"
                     sx={{
                       fontWeight: 600,
@@ -264,7 +280,7 @@ const ContactsSection = () => {
                     Мы в социальных сетях
                   </Typography>
                   <Stack direction="row" spacing={2}>
-                    <Button
+                    <Button 
                       startIcon={<WhatsAppIcon />}
                       onClick={handleWhatsAppClick}
                       variant="contained"
@@ -280,7 +296,7 @@ const ContactsSection = () => {
                     >
                       WhatsApp
                     </Button>
-                    <Button
+                    <Button 
                       startIcon={<InstagramIcon />}
                       onClick={handleInstagramClick}
                       variant="contained"
@@ -302,187 +318,28 @@ const ContactsSection = () => {
             </Stack>
           </Grid>
 
-          {/* Форма обратной связи */}
-          <Grid item xs={12} md={5}>
-            <Card sx={{ p: { xs: 2, md: 3 }, height: 'fit-content' }}>
-              <CardContent sx={{ p: 0 }}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 600,
-                    color: theme.palette.text.primary,
-                    mb: 1,
-                  }}
-                >
-                  Отправить сообщение
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: theme.palette.text.secondary,
-                    mb: 3,
-                  }}
-                >
-                  Заполните форму, и мы свяжемся с вами в WhatsApp
-                </Typography>
-
-                <Box component="form" onSubmit={handleSubmit}>
-                  <Stack spacing={3}>
-                    <TextField
-                      name="name"
-                      label="Ваше имя"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      fullWidth
-                      variant="outlined"
-                      sx={{
-                        '& .MuiOutlinedInput-root': {
-                          '&:hover fieldset': {
-                            borderColor: theme.palette.primary.main,
-                          },
-                          '&.Mui-focused fieldset': {
-                            borderColor: theme.palette.primary.main,
-                          },
-                        },
-                      }}
-                    />
-
-                    <TextField
-                      name="phone"
-                      label="Номер телефона"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                      fullWidth
-                      variant="outlined"
-                      placeholder="+996 XXX XXX XXX"
-                      sx={{
-                        '& .MuiOutlinedInput-root': {
-                          '&:hover fieldset': {
-                            borderColor: theme.palette.primary.main,
-                          },
-                          '&.Mui-focused fieldset': {
-                            borderColor: theme.palette.primary.main,
-                          },
-                        },
-                      }}
-                    />
-
-                    <TextField
-                      name="message"
-                      label="Сообщение"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      fullWidth
-                      multiline
-                      rows={4}
-                      variant="outlined"
-                      placeholder="Опишите ваш проект или задайте вопрос..."
-                      sx={{
-                        '& .MuiOutlinedInput-root': {
-                          '&:hover fieldset': {
-                            borderColor: theme.palette.primary.main,
-                          },
-                          '&.Mui-focused fieldset': {
-                            borderColor: theme.palette.primary.main,
-                          },
-                        },
-                      }}
-                    />
-
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      size="large"
-                      startIcon={<SendIcon />}
-                      sx={{
-                        py: 1.5,
-                        fontSize: '1.1rem',
-                        fontWeight: 600,
-                        textTransform: 'none',
-                      }}
-                    >
-                      Отправить в WhatsApp
-                    </Button>
-                  </Stack>
-                </Box>
-
-                <Divider sx={{ my: 3 }} />
-
-                <Box
-                  sx={{
-                    bgcolor: 'rgba(211, 47, 47, 0.05)',
-                    p: 2,
-                    borderRadius: 2,
-                    border: '1px solid rgba(211, 47, 47, 0.1)',
-                  }}
-                >
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: theme.palette.text.secondary,
-                      textAlign: 'center',
-                      fontStyle: 'italic',
-                    }}
-                  >
-                    💡 Для быстрой связи звоните напрямую или пишите в WhatsApp.<br />
-                    Мы ответим в течение 15 минут в рабочее время.
-                  </Typography>
-                </Box>
-              </CardContent>
+          {/* 2GIS Maps Integration */}
+          <Grid item xs={12} lg={8}>
+            <Card 
+              sx={{
+                height: '100%',
+                minHeight: '600px',
+                overflow: 'hidden',
+                borderRadius: 2,
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+                width: '100%',
+                position: 'relative',
+              }}
+            >
+              <DoubleGisMapComponent 
+                center={{ lat: 42.848495, lng: 74.607330 }} // Координаты MaxMetall для 2ГИС
+                zoom={16}
+                height="100%"
+                width="100%"
+              />
             </Card>
           </Grid>
         </Grid>
-
-        {/* Карта (заглушка) */}
-        <Box sx={{ mt: { xs: 4, md: 6 } }}>
-          <Card>
-            <Box
-              sx={{
-                height: { xs: 250, md: 350 },
-                bgcolor: 'rgba(211, 47, 47, 0.05)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '2px dashed rgba(211, 47, 47, 0.3)',
-                cursor: 'pointer',
-              }}
-              onClick={handleMapClick}
-            >
-              <Stack alignItems="center" spacing={2}>
-                <LocationOnIcon
-                  sx={{
-                    fontSize: '3rem',
-                    color: theme.palette.primary.main,
-                  }}
-                />
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: theme.palette.text.secondary,
-                    textAlign: 'center',
-                    px: 2,
-                  }}
-                >
-                  Google Maps интеграция<br />
-                  Байтик Баатыра, 36/3, Бишкек
-                </Typography>
-                <Button
-                  variant="outlined"
-                  startIcon={<DirectionsCarIcon />}
-                  sx={{
-                    borderColor: theme.palette.primary.main,
-                    color: theme.palette.primary.main,
-                  }}
-                >
-                  Открыть карту
-                </Button>
-              </Stack>
-            </Box>
-          </Card>
-        </Box>
       </Container>
     </Box>
   );

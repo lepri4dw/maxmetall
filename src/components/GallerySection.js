@@ -8,10 +8,8 @@ import {
   Dialog,
   DialogContent,
   IconButton,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
 } from '@mui/material';
+import Image from 'next/image';
 import CloseIcon from '@mui/icons-material/Close';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import { useState } from 'react';
@@ -22,20 +20,29 @@ const GallerySection = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Массив изображений для галереи с quilted layout
+  // Массив изображений для галереи - только из папки gallery
   const galleryImages = [
-    { src: '/images/gallery/work-1.jpg', alt: 'Перила из нержавеющей стали', title: 'Перила из нержавеющей стали', rows: 2, cols: 2 },
-    { src: '/images/gallery/work-2.jpg', alt: 'Ограждения для балкона', title: 'Ограждения для балкона', rows: 1, cols: 1 },
-    { src: '/images/gallery/work-3.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', rows: 1, cols: 1 },
-    { src: '/images/gallery/work-4.jpg', alt: 'Флагшток', title: 'Флагшток', rows: 1, cols: 2 },
-    { src: '/images/gallery/work-5.jpg', alt: 'Поручни ЛОВЗ', title: 'Поручни ЛОВЗ', rows: 1, cols: 1 },
-    { src: '/images/gallery/work-6.jpg', alt: 'Карниз для ванной', title: 'Карниз для ванной', rows: 1, cols: 1 },
-    { src: '/images/gallery/work-7.jpg', alt: 'Ограждения для лестницы', title: 'Ограждения для лестницы', rows: 2, cols: 1 },
-    { src: '/images/gallery/work-8.jpg', alt: 'Фурнитура из нержавейки', title: 'Фурнитура из нержавейки', rows: 1, cols: 2 },
-    { src: '/images/gallery/work-9.jpg', alt: 'Перила для террасы', title: 'Перила для террасы', rows: 1, cols: 1 },
-    { src: '/images/gallery/work-10.jpg', alt: 'Лестница со стеклом', title: 'Лестница со стеклом', rows: 1, cols: 1 },
-    { src: '/images/gallery/work-11.jpg', alt: 'Ограждения для дома', title: 'Ограждения для дома', rows: 1, cols: 1 },
-    { src: '/images/gallery/work-12.jpg', alt: 'Поручни для магазина', title: 'Поручни для магазина', rows: 2, cols: 1 },
+    // Вертикальные фото (высокие) - соотношение примерно 3:4 или 2:3
+    {
+      src: '/images/gallery/vertical-1.jpg',
+      alt: 'Карниз для ванной',
+      title: 'Карниз для ванной',
+      type: 'vertical'
+    },
+    { src: '/images/gallery/vertical-2.jpg', alt: 'Перила для лестницы', title: 'Перила для лестницы', type: 'vertical' },
+    { src: '/images/gallery/vertical-3.jpg', alt: 'Флагштоки', title: 'Флагштоки', type: 'vertical' },
+    
+    // Квадратные фото (1:1)
+    { src: '/images/gallery/square-1.jpg', alt: 'Перилла AUCA', title: 'Перилла AUCA', type: 'square' },
+    { src: '/images/gallery/square-2.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'square' },
+    { src: '/images/gallery/square-3.jpg', alt: 'Карнизы для ванной', title: 'Карнизы для ванной', type: 'square' },
+    { src: '/images/gallery/square-4.jpg', alt: 'Капсула времени', title: 'Капсула времени', type: 'square' },
+    
+    // Горизонтальные фото (широкие) - соотношение примерно 4:3 или 3:2
+    { src: '/images/gallery/horizontal-1.jpg', alt: 'Карниз для ванной', title: 'Карниз для ванной', type: 'horizontal' },
+    { src: '/images/gallery/horizontal-2.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'horizontal' },
+    { src: '/images/gallery/horizontal-3.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'horizontal' },
+    { src: '/images/gallery/horizontal-4.jpg', alt: 'Поручни ЛОВЗ', title: 'Поручни ЛОВЗ', type: 'horizontal' },
   ];
 
   const handleImageClick = (image) => {
@@ -50,7 +57,7 @@ const GallerySection = () => {
 
   return (
     <Box id="gallery" sx={{ py: { xs: 6, md: 10 }, bgcolor: 'white' }}>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2, md: 3 } }}>
         {/* Заголовок секции */}
         <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
           <Typography
@@ -76,224 +83,271 @@ const GallerySection = () => {
           </Typography>
         </Box>
 
-        {/* Quilted ImageList галерея */}
-        <ImageList
+        {/* Masonry галерея с правильными пропорциями */}
+        <Box
           sx={{ 
             width: '100%', 
-            height: { xs: 400, md: 500 },
-            transform: 'translateZ(0)', // Улучшение производительности
+            maxHeight: { xs: '70vh', md: '80vh' },
+            overflow: 'auto',
+            // Красивый скроллбар
+            '&::-webkit-scrollbar': {
+              width: '6px',
+            },
+            '&::-webkit-scrollbar-thumb': {
+              backgroundColor: '#d32f2f',
+              borderRadius: '3px',
+            },
+            '&::-webkit-scrollbar-track': {
+              backgroundColor: 'rgba(0, 0, 0, 0.1)',
+            },
           }}
-          variant="quilted"
-          cols={isMobile ? 2 : 4}
-          rowHeight={121}
         >
-          {galleryImages.map((image, index) => (
-            <ImageListItem 
-              key={index}
-              cols={image.cols || 1} 
-              rows={image.rows || 1}
-              sx={{
-                cursor: 'pointer',
-                borderRadius: 2,
-                overflow: 'hidden',
-                position: 'relative',
-                '&:hover': {
-                  '& .image-placeholder': {
-                    transform: 'scale(1.05)',
-                  },
-                  '& .overlay': {
-                    opacity: 1,
-                  },
-                },
-              }}
-              onClick={() => handleImageClick(image)}
-            >
-              {/* Заглушка для изображения */}
+          <Box
+            sx={{
+              columns: { xs: 2, sm: 3, md: 4 },
+              columnGap: { xs: 1, md: 2 },
+              columnFill: 'balance', // Балансируем колонки для равномерного заполнения
+              pb: 2,
+              '& > *': {
+                breakInside: 'avoid',
+                marginBottom: { xs: 1, md: 2 },
+                display: 'block',
+              },
+            }}
+          >
+          {galleryImages.map((image, index) => {
+            // Размеры в зависимости от типа изображения и экрана
+            const getImageHeight = (type, isMobile) => {
+              if (isMobile) {
+                switch (type) {
+                  case 'vertical': return [200, 220, 240, 180, 210]; // Высокие
+                  case 'horizontal': return [120, 140, 110, 130, 115]; // Низкие и широкие
+                  case 'square': return [160, 170, 150, 165, 155]; // Средние квадратные
+                  default: return [160];
+                }
+              } else {
+                switch (type) {
+                  case 'vertical': return [380, 420, 400, 360, 440]; // Очень высокие
+                  case 'horizontal': return [200, 220, 180, 240, 190]; // Низкие и широкие
+                  case 'square': return [280, 300, 260, 290, 270]; // Средние квадратные
+                  default: return [280];
+                }
+              }
+            };
+
+            const heightOptions = getImageHeight(image.type, isMobile);
+            const imageHeight = heightOptions[index % heightOptions.length];
+
+            return (
               <Box
-                className="image-placeholder"
+                key={index}
                 sx={{
-                  width: '100%',
-                  height: '100%',
-                  bgcolor: 'rgba(211, 47, 47, 0.05)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'transform 0.3s ease-in-out',
-                  border: '2px dashed rgba(211, 47, 47, 0.3)',
+                  cursor: 'pointer',
                   borderRadius: 2,
+                  overflow: 'hidden',
                   position: 'relative',
-                  backgroundImage: `linear-gradient(45deg, rgba(211, 47, 47, 0.02) 25%, transparent 25%), 
-                                   linear-gradient(-45deg, rgba(211, 47, 47, 0.02) 25%, transparent 25%), 
-                                   linear-gradient(45deg, transparent 75%, rgba(211, 47, 47, 0.02) 75%), 
-                                   linear-gradient(-45deg, transparent 75%, rgba(211, 47, 47, 0.02) 75%)`,
-                  backgroundSize: '20px 20px',
-                  backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+                  height: imageHeight,
+                  width: '100%',
+                  '&:hover': {
+                    '& img': {
+                      transform: 'scale(1.05)',
+                    },
+                    '& .overlay': {
+                      opacity: 1,
+                    },
+                  },
                 }}
+                onClick={() => handleImageClick(image)}
               >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 480px) 50vw, (max-width: 768px) 33vw, 25vw"
+                  style={{
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease',
+                  }}
+                />
+                
+                {/* Overlay с иконкой при наведении */}
                 <Box
+                  className="overlay"
                   sx={{
-                    textAlign: 'center',
-                    color: theme.palette.text.secondary,
-                    px: 2,
-                    py: 1,
-                    bgcolor: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: 1,
-                    backdropFilter: 'blur(5px)',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    bgcolor: 'rgba(0, 0, 0, 0.5)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    opacity: 0,
+                    transition: 'opacity 0.3s ease',
                   }}
                 >
-                  <Typography variant="body2" sx={{ mb: 0.5, fontWeight: 600 }}>
+                  <ZoomInIcon 
+                    sx={{ 
+                      color: 'white', 
+                      fontSize: { xs: 28, md: 40 },
+                    }} 
+                  />
+                </Box>
+
+                {/* Подпись */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
+                    color: 'white',
+                    p: { xs: 0.5, md: 1 },
+                  }}
+                >
+                  <Typography 
+                    variant="body2" 
+                    sx={{ 
+                      fontSize: { xs: '0.75rem', md: '0.85rem' },
+                      fontWeight: 500 
+                    }}
+                  >
                     {image.title}
                   </Typography>
-                  <Typography variant="caption" sx={{ fontSize: '0.65rem', opacity: 0.7 }}>
-                    {image.src}
-                  </Typography>
                 </Box>
               </Box>
-
-              {/* Оверлей при наведении */}
-              <Box
-                className="overlay"
-                sx={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  bgcolor: 'rgba(0, 0, 0, 0.6)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  opacity: 0,
-                  transition: 'opacity 0.3s ease-in-out',
-                  borderRadius: 2,
-                }}
-              >
-                <Box sx={{ textAlign: 'center', color: 'white' }}>
-                  <ZoomInIcon
-                    sx={{
-                      fontSize: '2.5rem',
-                      mb: 1,
-                    }}
-                  />
-                  <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                    Посмотреть
-                  </Typography>
-                </Box>
-              </Box>
-
-              {/* Подпись к изображению */}
-              <ImageListItemBar
-                title={image.title}
-                sx={{
-                  background: 'linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%)',
-                  '& .MuiImageListItemBar-title': {
-                    fontSize: '0.85rem',
-                    fontWeight: 500,
-                  },
-                }}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-
-        {/* Дополнительная информация */}
-        <Box
-          sx={{
-            textAlign: 'center',
-            mt: { xs: 4, md: 6 },
-            p: { xs: 3, md: 4 },
-            bgcolor: 'rgba(211, 47, 47, 0.02)',
-            borderRadius: 3,
-            border: '1px solid rgba(211, 47, 47, 0.1)',
-          }}
-        >
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 600,
-              color: theme.palette.text.primary,
-              mb: 2,
-            }}
-          >
-            Каждая работа выполнена с любовью к деталям
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              color: theme.palette.text.secondary,
-              maxWidth: 700,
-              mx: 'auto',
-            }}
-          >
-            Мы используем только качественную нержавеющую сталь и современные технологии производства. 
-            15 лет опыта позволяют нам создавать изделия, которые служат десятилетиями.
-          </Typography>
+            );
+          })}
+          </Box>
         </Box>
+          
       </Container>
 
-      {/* Диалог для увеличенного изображения */}
+      {/* Современное модальное окно */}
       <Dialog
         open={openDialog}
         onClose={handleCloseDialog}
-        maxWidth="lg"
+        maxWidth={false}
         fullWidth
         sx={{
+          '& .MuiBackdrop-root': {
+            backgroundColor: 'rgba(0, 0, 0, 0.6)', // Еще более светлое затемнение
+            backdropFilter: 'blur(8px)',
+          },
           '& .MuiDialog-paper': {
-            bgcolor: 'transparent',
+            backgroundColor: 'transparent',
             boxShadow: 'none',
-            overflow: 'visible',
+            borderRadius: 0,
+            margin: 0, // Убираем все отступы
+            maxWidth: '100vw', // Полный экран везде
+            maxHeight: '100vh', // Полная высота везде
+            width: '100vw',
+            height: '100vh',
           },
         }}
       >
-        <DialogContent
-          sx={{
-            position: 'relative',
+        <DialogContent 
+          sx={{ 
+            position: 'relative', 
             p: 0,
-            bgcolor: 'transparent',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '50vh',
+            '&::-webkit-scrollbar': { display: 'none' },
           }}
         >
+          {/* Кнопка закрытия */}
           <IconButton
             onClick={handleCloseDialog}
             sx={{
-              position: 'absolute',
-              top: -50,
-              right: -10,
+              position: 'fixed',
+              top: { xs: 16, md: 24 },
+              right: { xs: 16, md: 24 },
               color: 'white',
-              bgcolor: 'rgba(0, 0, 0, 0.5)',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              zIndex: 1300,
+              width: { xs: 40, md: 48 },
+              height: { xs: 40, md: 48 },
               '&:hover': {
-                bgcolor: 'rgba(0, 0, 0, 0.7)',
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                transform: 'scale(1.05)',
               },
-              zIndex: 1,
+              transition: 'all 0.3s ease',
             }}
           >
-            <CloseIcon />
+            <CloseIcon sx={{ fontSize: { xs: 20, md: 24 } }} />
           </IconButton>
+          
           {selectedImage && (
             <Box
               sx={{
+                position: 'relative',
                 width: '100%',
-                height: { xs: 300, md: 500 },
-                bgcolor: 'rgba(211, 47, 47, 0.1)',
-                borderRadius: 2,
+                height: '100%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: '2px dashed rgba(211, 47, 47, 0.3)',
               }}
             >
               <Box
                 sx={{
-                  textAlign: 'center',
-                  color: theme.palette.text.secondary,
-                  px: 2,
+                  position: 'relative',
+                  width: '100vw', // Полный экран по ширине
+                  height: 'calc(100vh - 50px)', // Вычитаем высоту текстовой панели
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  top: 0,
                 }}
               >
-                <Typography variant="h6" sx={{ mb: 1, fontWeight: 500 }}>
-                  {selectedImage.title}
-                </Typography>
-                <Typography variant="body2">
-                  Увеличенное изображение: {selectedImage.src}
-                </Typography>
+                <Image
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  fill
+                  style={{
+                    objectFit: 'contain', // Сохраняем пропорции, заполняем максимально возможную область
+                  }}
+                  priority
+                />
+              </Box>
+              
+              {/* Информация об изображении внизу экрана */}
+              <Box
+                sx={{
+                  position: 'fixed',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 80%, transparent 100%)',
+                  color: 'white',
+                  p: { xs: 2, md: 2.5 },
+                  backdropFilter: 'blur(12px)',
+                  zIndex: 1301,
+                  minHeight: { xs: '40px', md: '50px' }, // Фиксированная минимальная высота
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Container maxWidth="lg">
+                  <Typography 
+                    variant="h5" 
+                    sx={{ 
+                      fontWeight: 600,
+                      fontSize: { xs: '1.1rem', md: '1.3rem' },
+                      mb: 0.5,
+                      textShadow: '0 2px 4px rgba(0,0,0,0.8)',
+                      textAlign: 'center',
+                    }}
+                  >
+                    {selectedImage.title}
+                  </Typography>
+                </Container>
               </Box>
             </Box>
           )}

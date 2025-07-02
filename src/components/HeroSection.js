@@ -7,11 +7,12 @@ import {
   useTheme,
   Stack,
 } from '@mui/material';
-import PhoneIcon from '@mui/icons-material/Phone';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const HeroSection = () => {
   const theme = useTheme();
+  const isMobile = theme.breakpoints.down('sm');
 
   const handleCallClick = () => {
     window.open('tel:+996555033377', '_self');
@@ -35,7 +36,7 @@ const HeroSection = () => {
         overflow: 'hidden',
       }}
     >
-      {/* Фоновое изображение */}
+      {/* Фоновое изображение - разные для мобильных и десктопных */}
       <Box
         sx={{
           position: 'absolute',
@@ -43,9 +44,12 @@ const HeroSection = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url(/images/hero-bg.jpg)',
+          backgroundImage: {
+            xs: 'url(/images/hero-bg-mobile.jpg)', // Изображение для мобильных устройств
+            sm: 'url(/images/hero-bg.jpg)', // Изображение для планшетов и десктопов
+          },
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: { xs: 'center', md: 'center' },
           backgroundRepeat: 'no-repeat',
           zIndex: 1,
           '&::after': {
@@ -61,7 +65,12 @@ const HeroSection = () => {
         }}
       />
       
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 3, textAlign: 'center' }}>
+      <Container maxWidth="lg" sx={{ 
+        position: 'relative', 
+        zIndex: 3, 
+        textAlign: 'center',
+        px: { xs: 1, sm: 2, md: 3 }  
+      }}>
         {/* Заголовок с градиентом */}
         <Typography
           variant="h1"
@@ -134,8 +143,16 @@ const HeroSection = () => {
           <Button
             variant="outlined"
             size="large"
-            startIcon={<PhoneIcon />}
-            onClick={handleCallClick}
+            startIcon={
+              <WhatsAppIcon 
+                sx={{ 
+                  fontSize: { xs: '1.2rem', md: '1.8rem' } + ' !important',
+                  width: { xs: '1.2rem', md: '1.8rem' },
+                  height: { xs: '1.2rem', md: '1.8rem' }
+                }} 
+              />
+            }
+            onClick={() => window.open('https://wa.me/996555033377', '_blank')}
             sx={{
               py: 1.8,
               px: { xs: 4, md: 5 },
@@ -149,13 +166,13 @@ const HeroSection = () => {
               background: 'rgba(255, 255, 255, 0.1)',
               transition: 'all 0.3s ease',
               '&:hover': {
-                borderColor: theme.palette.primary.main,
-                background: 'rgba(255, 255, 255, 0.2)',
+                borderColor: '#25D366',
+                background: 'rgba(37, 211, 102, 0.15)',
                 transform: 'translateY(-2px)'
               }
             }}
           >
-            Заказать звонок
+            Связаться с нами
           </Button>
         </Stack>
       </Container>

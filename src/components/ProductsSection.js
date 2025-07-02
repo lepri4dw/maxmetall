@@ -11,10 +11,11 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 import BuildIcon from '@mui/icons-material/Build';
 import PoolIcon from '@mui/icons-material/Pool';
 import SecurityIcon from '@mui/icons-material/Security';
@@ -28,20 +29,16 @@ import SettingsIcon from '@mui/icons-material/Settings';
 const ProductsSection = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isSmallMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isVerySmallMobile = useMediaQuery('(max-width:400px)');
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
   const products = [
     {
-      title: 'Перила',
-      description: 'Стильные и надежные перила для лестниц, балконов и террас из нержавеющей стали.',
+      title: 'Перила/Ограждения',
+      description: 'Стильные и надежные перила и ограждения для лестниц, балконов и террас из нержавеющей стали.',
       icon: <SecurityIcon />,
-      image: '/images/products/railings.jpg', // Путь для изображения перил
-    },
-    {
-      title: 'Ограждения',
-      description: 'Качественные ограждения для безопасности и эстетики вашего пространства.',
-      icon: <BuildIcon />,
-      image: '/images/products/fencing.jpg', // Путь для изображения ограждений
+      image: '/images/products/railings.jpg', // Путь для изображения перил/ограждений
     },
     {
       title: 'Лестницы в бассейн',
@@ -50,31 +47,25 @@ const ProductsSection = () => {
       image: '/images/products/pool-stairs.jpg', // Путь для изображения лестниц в бассейн
     },
     {
+      title: 'Карнизы в ванну',
+      description: 'Влагостойкие карнизы для ванных комнат и душевых кабин.',
+      icon: <ShowerIcon />,
+      image: '/images/products/shower-rods.jpg', // Путь для изображения карнизов
+    },
+    {
+      title: 'Поручни/ЛОВЗ',
+      description: 'Поручни для людей с ограниченными возможностями здоровья, соответствующие всем стандартам.',
+      icon: <AccessibilityIcon />,
+      image: '/images/products/accessibility-rails.jpg', // Путь для изображения поручней ЛОВЗ
+    },
+    {
       title: 'Флагштоки',
       description: 'Прочные флагштоки различной высоты для установки государственных и корпоративных флагов.',
       icon: <FlagIcon />,
       image: '/images/products/flagpoles.jpg', // Путь для изображения флагштоков
     },
     {
-      title: 'Капсулы для закладки',
-      description: 'Специальные капсулы для закладки документов и памятных предметов.',
-      icon: <BuildIcon />,
-      image: '/images/products/capsules.jpg', // Путь для изображения капсул
-    },
-    {
-      title: 'ЛОВЗ поручни',
-      description: 'Поручни для людей с ограниченными возможностями здоровья, соответствующие всем стандартам.',
-      icon: <AccessibilityIcon />,
-      image: '/images/products/accessibility-rails.jpg', // Путь для изображения поручней ЛОВЗ
-    },
-    {
-      title: 'Карнизы в ванную/душевую',
-      description: 'Влагостойкие карнизы для ванных комнат и душевых кабин.',
-      icon: <ShowerIcon />,
-      image: '/images/products/shower-rods.jpg', // Путь для изображения карнизов
-    },
-    {
-      title: 'Труба',
+      title: 'Трубы',
       description: 'Трубы из нержавеющей стали различного диаметра для любых целей.',
       icon: <PipeIcon />,
       image: '/images/products/pipes.jpg', // Путь для изображения труб
@@ -85,6 +76,12 @@ const ProductsSection = () => {
       icon: <SettingsIcon />,
       image: '/images/products/hardware.jpg', // Путь для изображения фурнитуры
     },
+    {
+      title: 'Капсулы времени',
+      description: 'Специальные капсулы для закладки документов и памятных предметов на долгие годы.',
+      icon: <BuildIcon />,
+      image: '/images/products/capsules.jpg', // Путь для изображения капсул времени
+    },
   ];
 
   const handleContactClick = () => {
@@ -93,7 +90,7 @@ const ProductsSection = () => {
 
   return (
     <Box id="products" sx={{ py: { xs: 6, md: 10 }, bgcolor: '#fafafa' }}>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2, md: 3 } }}>
         {/* Заголовок секции */}
         <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
           <Typography
@@ -122,10 +119,14 @@ const ProductsSection = () => {
         {/* Swiper слайдер продуктов */}
         <Box sx={{ mx: { xs: 0, md: 4 }, position: 'relative' }}>
           <Swiper
-            modules={[Navigation, Pagination, A11y]}
-            slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            slidesPerView={useMediaQuery('(max-width:720px)') ? 1 : isTablet ? 2 : 3}
             slidesPerGroup={1}
-            spaceBetween={isMobile ? 16 : 24}
+            spaceBetween={24}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             navigation={{
               nextEl: '.swiper-button-next-products',
               prevEl: '.swiper-button-prev-products',
@@ -133,9 +134,9 @@ const ProductsSection = () => {
             pagination={{
               el: '.swiper-pagination-products',
               clickable: true,
-              dynamicBullets: true,
+              dynamicBullets: false,
             }}
-            loop={false}
+            loop={true}
             style={{
               paddingBottom: '50px',
             }}
@@ -147,14 +148,31 @@ const ProductsSection = () => {
                     height: 420, // Фиксированная высота для всех карточек
                     display: 'flex',
                     flexDirection: 'column',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease-in-out',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    borderRadius: '16px',
+                    transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                     '&:hover': {
                       transform: 'translateY(-8px)',
-                      boxShadow: '0 12px 30px rgba(0, 0, 0, 0.15)',
+                      boxShadow: '0 15px 35px rgba(0, 0, 0, 0.15)',
+                      '&::before': {
+                        opacity: 1,
+                      },
+                    },
+                    '&::before': {
+                      content: '""',
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '16px',
+                      background: 'linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.02) 100%)',
+                      opacity: 0,
+                      transition: 'opacity 0.4s ease',
+                      zIndex: 1,
                     },
                   }}
-                  onClick={handleContactClick}
                 >
                   {/* Изображение продукта */}
                   <Box
@@ -162,8 +180,15 @@ const ProductsSection = () => {
                       height: 200,
                       position: 'relative',
                       overflow: 'hidden',
-                      borderBottom: '3px solid',
-                      borderColor: theme.palette.primary.main,
+                      '&::after': {
+                        content: '""',
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '4px',
+                        background: 'linear-gradient(90deg, rgba(211,47,47,0.7) 0%, rgba(245,81,95,0.9) 100%)',
+                      }
                     }}
                   >
                     <Image
@@ -241,16 +266,31 @@ const ProductsSection = () => {
                       {product.description}
                     </Typography>
                     <Button
-                      variant="text"
+                      variant="outlined"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        const contactsSection = document.getElementById('contacts');
+                        if (contactsSection) {
+                          contactsSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
                       sx={{
-                        color: theme.palette.primary.main,
-                        fontWeight: 600,
-                        textTransform: 'none',
-                        p: 0,
                         mt: 2,
-                        justifyContent: 'flex-start',
+                        fontWeight: 600,
+                        borderRadius: '30px',
+                        borderColor: theme.palette.primary.main,
+                        color: theme.palette.primary.main,
+                        textTransform: 'none',
+                        py: 0.8,
+                        px: 2,
+                        transition: 'all 0.3s ease',
+                        zIndex: 2,
+                        position: 'relative',
                         '&:hover': {
-                          bgcolor: 'rgba(211, 47, 47, 0.05)',
+                          background: 'linear-gradient(90deg, rgba(211,47,47,0.05) 0%, rgba(245,81,95,0.1) 100%)',
+                          borderColor: theme.palette.primary.dark,
+                          transform: 'translateY(-2px)',
+                          boxShadow: '0 4px 10px rgba(211, 47, 47, 0.15)',
                         },
                       }}
                     >
@@ -276,7 +316,7 @@ const ProductsSection = () => {
               bgcolor: 'white',
               borderRadius: '50%',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-              display: 'flex',
+              display: { xs: isSmallMobile ? 'none' : 'flex', md: 'flex' },
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
@@ -306,7 +346,7 @@ const ProductsSection = () => {
               bgcolor: 'white',
               borderRadius: '50%',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-              display: 'flex',
+              display: { xs: isSmallMobile ? 'none' : 'flex', md: 'flex' },
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
@@ -328,73 +368,128 @@ const ProductsSection = () => {
             className="swiper-pagination-products"
             sx={{
               position: 'absolute',
-              bottom: 0,
-              left: '50%',
-              transform: 'translateX(-50%)',
-              display: 'flex',
-              justifyContent: 'center',
-              gap: 1,
+              bottom: '10px !important',
+              left: '50% !important',
+              transform: 'translateX(-50%) !important',
+              display: 'flex !important',
+              justifyContent: 'center !important',
+              alignItems: 'center !important',
+              gap: '8px !important',
+              width: 'auto !important',
+              height: 'auto !important',
+              zIndex: 10,
               '& .swiper-pagination-bullet': {
-                bgcolor: 'rgba(0, 0, 0, 0.2)',
-                opacity: 1,
-                width: 10,
-                height: 10,
-                borderRadius: '50%',
-                transition: 'all 0.3s ease',
+                backgroundColor: 'rgba(0, 0, 0, 0.3) !important',
+                opacity: '1 !important',
+                width: '10px !important',
+                height: '10px !important',
+                borderRadius: '50% !important',
+                transition: 'all 0.3s ease !important',
+                margin: '0 4px !important',
+                cursor: 'pointer !important',
+                border: 'none !important',
+                outline: 'none !important',
               },
               '& .swiper-pagination-bullet-active': {
-                bgcolor: theme.palette.primary.main,
-                transform: 'scale(1.2)',
+                backgroundColor: `${theme.palette.primary.main} !important`,
+                transform: 'scale(1.3) !important',
               },
             }}
           />
         </Box>
 
-        {/* Призыв к действию */}
+        {/* Современный призыв к действию */}
         <Box
           sx={{
-            textAlign: 'center',
-            mt: { xs: 4, md: 6 },
-            p: { xs: 3, md: 4 },
-            bgcolor: 'white',
-            borderRadius: 3,
-            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+            mt: { xs: 6, md: 8 },
+            position: 'relative',
+            mx: { xs: 1, sm: 2, md: 'auto' },
+            maxWidth: '800px',
           }}
         >
-          <Typography
-            variant="h5"
+          <Box
             sx={{
-              fontWeight: 600,
-              color: theme.palette.text.primary,
-              mb: 2,
+              background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
+              border: '1px solid #e9ecef',
+              borderRadius: { xs: '20px', md: '24px' },
+              position: 'relative',
+              overflow: 'hidden',
+              p: { xs: 3, sm: 4, md: 5 },
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.06)',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                height: '4px',
+                background: 'linear-gradient(90deg, #d32f2f 0%, #f5515f 100%)',
+              },
             }}
           >
-            Нужна консультация или индивидуальный проект?
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              color: theme.palette.text.secondary,
-              mb: 3,
-              maxWidth: 500,
-              mx: 'auto',
-            }}
-          >
-            Свяжитесь с нами для обсуждения вашего проекта. Работаем по предварительному звонку.
-          </Typography>
-          <Button
-            variant="contained"
-            size="large"
-            onClick={handleContactClick}
-            sx={{
-              py: 1.5,
-              px: 4,
-              fontSize: '1.1rem',
-              fontWeight: 600,
-            }}
-          >
-            Связаться с нами
-          </Button>
+            <Box 
+              sx={{ 
+                textAlign: 'center',
+              }}
+            >
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: 700,
+                  color: theme.palette.text.primary,
+                  mb: { xs: 1.5, md: 2 },
+                  fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' },
+                  lineHeight: 1.3,
+                }}
+              >
+                Нужна консультация?
+              </Typography>
+              
+              <Typography
+                variant="body1"
+                sx={{
+                  color: theme.palette.text.secondary,
+                  fontSize: { xs: '0.95rem', sm: '1rem', md: '1.1rem' },
+                  lineHeight: 1.6,
+                  mb: { xs: 3, md: 4 },
+                  maxWidth: '500px',
+                  mx: 'auto',
+                }}
+              >
+                Свяжитесь с нами для обсуждения вашего проекта
+              </Typography>
+              
+              <Button
+                variant="contained"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactsSection = document.getElementById('contacts');
+                  if (contactsSection) {
+                    contactsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                sx={{
+                  py: { xs: 1.5, md: 1.8 },
+                  px: { xs: 3, md: 4 },
+                  fontSize: { xs: '1rem', md: '1.1rem' },
+                  fontWeight: 600,
+                  borderRadius: '50px',
+                  backgroundColor: theme.palette.primary.main,
+                  color: 'white',
+                  textTransform: 'none',
+                  boxShadow: '0 4px 20px rgba(211, 47, 47, 0.3)',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    backgroundColor: theme.palette.primary.dark,
+                    boxShadow: '0 8px 25px rgba(211, 47, 47, 0.4)',
+                    transform: 'translateY(-2px)',
+                  },
+                }}
+              >
+                Связаться с нами
+              </Button>
+            </Box>
+          </Box>
         </Box>
       </Container>
     </Box>
