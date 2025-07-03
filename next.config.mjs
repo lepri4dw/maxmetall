@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // Для оптимизации на Render
+  output: 'export',
+  trailingSlash: true,
   images: {
-    domains: ['img.youtube.com'], // Для YouTube thumbnails
-    unoptimized: true // Если возникнут проблемы с изображениями
-  },
-  experimental: {
-    appDir: true
-  },
-  devIndicators: false
+    unoptimized: true
+  }
 };
 
 export default nextConfig;
