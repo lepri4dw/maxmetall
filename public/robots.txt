@@ -1,0 +1,385 @@
+User-agent: *
+Allow: /
+
+# Основные страницы
+Allow: /
+Allow: /images/
+Allow: /static/
+Allow: /_next/static/
+
+# Запрещенные для индексации
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /*.json$
+Disallow: /*_buildManifest.js$
+Disallow: /*_middlewareManifest.js$
+Disallow: /*_ssgManifest.js$
+Disallow: /*.js.map$
+
+# Специальные боты
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+Allow: /static/
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+Allow: /static/
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Allow: /images/
+Allow: /static/
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Allow: /images/
+Allow: /static/
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Allow: /images/
+Allow: /static/
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Allow: /images/
+Allow: /static/
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/
+
+User-agent: Twitterbot
+Allow: /
+Allow: /images/
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/
+
+User-agent: WhatsApp
+Allow: /
+Allow: /images/
+
+User-agent: TelegramBot
+Allow: /
+Allow: /images/
+
+# Злоумышленные боты
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: linkdexbot
+Disallow: /
+
+User-agent: Mediatoolkitbot
+Disallow: /
+
+User-agent: voltron
+Disallow: /
+
+User-agent: BacklinkCrawler
+Disallow: /
+
+User-agent: CopyCat
+Disallow: /
+
+User-agent: MiMi
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: CopyRightCheck
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: ProWebWalker
+Disallow: /
+
+User-agent: CheeseBot
+Disallow: /
+
+User-agent: LNSpiderguy
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: NetAnts
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: MIIxpc
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Microsoft URL Control
+Disallow: /
+
+User-agent: Xenu
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: libwww
+Disallow: /
+
+User-agent: ZyBORG
+Disallow: /
+
+User-agent: Download Ninja
+Disallow: /
+
+User-agent: fast
+Disallow: /
+
+User-agent: NetZIP
+Disallow: /
+
+User-agent: Indy Library
+Disallow: /
+
+User-agent: dloader
+Disallow: /
+
+User-agent: FairAd Client
+Disallow: /
+
+User-agent: ASPSeek
+Disallow: /
+
+User-agent: DCPbot
+Disallow: /
+
+User-agent: Harvest
+Disallow: /
+
+User-agent: Extract
+Disallow: /
+
+User-agent: Crescent
+Disallow: /
+
+User-agent: SafeSearch
+Disallow: /
+
+User-agent: Szukacz
+Disallow: /
+
+User-agent: QueryN Metasearch
+Disallow: /
+
+User-agent: Openfind data gathere
+Disallow: /
+
+User-agent: Openfind
+Disallow: /
+
+User-agent: Xenu's Link Sleuth
+Disallow: /
+
+User-agent: Xenu's
+Disallow: /
+
+User-agent: Zeus
+Disallow: /
+
+User-agent: RepoMonkey Bait & Tackle
+Disallow: /
+
+User-agent: RepoMonkey
+Disallow: /
+
+User-agent: Microsoft URL Control
+Disallow: /
+
+User-agent: Openbot
+Disallow: /
+
+User-agent: URL Control
+Disallow: /
+
+User-agent: Zeus Link Scout
+Disallow: /
+
+User-agent: Zeus 32297 Webster Pro V2.9 Win32
+Disallow: /
+
+User-agent: Webster Pro
+Disallow: /
+
+User-agent: EroCrawler
+Disallow: /
+
+User-agent: LinkScan/8.1a Unix
+Disallow: /
+
+User-agent: Keyword Density/0.9
+Disallow: /
+
+User-agent: Kenjin Spider
+Disallow: /
+
+User-agent: Spam spider
+Disallow: /
+
+User-agent: Iron33/1.0.2
+Disallow: /
+
+User-agent: Bookmark search tool
+Disallow: /
+
+User-agent: GetRight/4.2
+Disallow: /
+
+User-agent: FairAd Client
+Disallow: /
+
+User-agent: Gaisbot
+Disallow: /
+
+User-agent: Aqua_Products
+Disallow: /
+
+User-agent: Radiation Retriever 1.1
+Disallow: /
+
+User-agent: Flaming AttackBot
+Disallow: /
+
+User-agent: TARA
+Disallow: /
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: Microsoft URL Control - 6.00.8169
+Disallow: /
+
+User-agent: DTS Agent
+Disallow: /
+
+User-agent: MSIE
+Disallow: /
+
+User-agent: Reaper
+Disallow: /
+
+User-agent: User-Agent
+Disallow: /
+
+User-agent: Nutch
+Disallow: /
+
+# Sitemap
+Sitemap: https://maxmetall.kg/sitemap.xml
+
+# Важные страницы для быстрой индексации
+# Главная страница
+# https://maxmetall.kg/
+
+# Продукция
+# https://maxmetall.kg/#products
+
+# Галерея
+# https://maxmetall.kg/#gallery
+
+# Контакты
+# https://maxmetall.kg/#contacts
+
+# Отзывы
+# https://maxmetall.kg/#reviews
+
+# Достижения
+# https://maxmetall.kg/#achievements
+
+# Информация о компании
+# https://maxmetall.kg/#about
+
+# Изображения продукции
+# https://maxmetall.kg/images/products/
+
+# Изображения галереи
+# https://maxmetall.kg/images/gallery/
+
+# Изображения партнеров
+# https://maxmetall.kg/images/partners/
+
+# Основная информация для поисковых систем:
+# Компания: MaxMetall
+# Адрес: ул. Чуйкова 168, Бишкек, Кыргызстан
+# Телефон: +996555918355
+# Email: info@maxmetall.kg
+# Основная деятельность: Производство изделий из нержавеющей стали
+# Продукция: Перила, ограждения, лестницы для бассейнов, карнизы, поручни ЛОВЗ, флагштоки, трубы, фурнитура, капсулы времени
+# Опыт работы: 15 лет
+# Регион деятельности: Кыргызстан (Бишкек, Ош, Джалал-Абад, Каракол, Нарын, Талас, Баткен)
+# Материалы: AISI 304, AISI 316, AISI 201, 12Х18Н10Т, 08Х18Н10
+# Технологии: Аргонная сварка, плазменная резка, лазерная резка, полировка, токарная обработка, фрезерная обработка
+
+# Последнее обновление: 2024-12-20

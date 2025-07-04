@@ -1,6 +1,6 @@
 'use client';
 /**
- * AchievementsSection Component
+ * AchievementsSection Comp    { number: 'Без наценок', label: 'Прямые цены от мастерской', icon: '�', color: '#d32f2f' },nent
  * 
  * Displays company achievements and statistics in visually appealing cards:
  * - Customer count
@@ -45,8 +45,7 @@ const AchievementsSection = () => {
     { number: '50,000+', label: 'Довольных клиентов', icon: '👥', color: '#d32f2f' },
     { number: '15', label: 'Лет на рынке', icon: '🏆', color: '#f5515f' },
     { number: '100%', label: 'Качественная сталь', icon: '⭐', color: '#424242' },
-    { number: '24/7', label: 'Поддержка клиентов', icon: '📞', color: '#d32f2f' },
-  ];
+    { number: '500+', label: 'Проектов выполнено', icon: '🏗️', color: '#d32f2f' }];
 
   return (
     <Box 

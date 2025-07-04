@@ -24,10 +24,10 @@ const LogoSlider = () => {
     { name: 'Аю Групп', logo: '/images/partners/partner-1.png' },
     { name: 'Школа Газпром', logo: '/images/partners/partner-2.png' },
     { name: 'Нурзаман Строй', logo: '/images/partners/partner-3.png' },
-    { name: 'Элит Хаус', logo: '/images/partners/partner-4.png' },
-    { name: 'Государственная Резиденция', logo: '/images/partners/partner-5.png' },
+    { name: 'Элит Хаус', logo: '/images/partners/partner-4.jpg' },
+    { name: 'Государственная Резиденция', logo: '/images/partners/partner-5.jpg' },
     { name: 'Имарат Групп', logo: '/images/partners/partner-6.png' },
-    { name: 'Борсан Констракшн', logo: '/images/partners/partner-7.png' },
+    { name: 'Борсан Констракшн', logo: '/images/partners/partner-7.jpg' },
     { name: 'Авента Инжиниринг', logo: '/images/partners/partner-8.png' },
     { name: 'Ихлас Строй', logo: '/images/partners/partner-9.png' },
   ];
@@ -56,7 +56,7 @@ const LogoSlider = () => {
               lineHeight: 1.6,
             }}
           >
-            Мы гордимся сотрудничеством с ведущими компаниями Бишкека и Кыргызстана
+              Ведущие компании кыргызстана и многие частные лица
           </Typography>
         </Box>
 

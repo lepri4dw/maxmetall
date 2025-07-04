@@ -1,12 +1,12 @@
 'use client';
 /**
  * ContactsSection Component
- * 
+ *
  * Displays company contact information with:
  * - Company details (phone, address, hours)
  * - Social media links (WhatsApp, Instagram)
  * - 2GIS Maps integration showing company location
- * 
+ *
  * All sections are fully responsive for mobile and desktop.
  */
 import {
@@ -32,11 +32,14 @@ const ContactsSection = () => {
   const theme = useTheme();
 
   const handlePhoneClick = () => {
-    window.open('tel:+996555033377', '_self');
+    window.open('tel:+996555918355', '_self');
+  };
+  const handlePhoneClickOlya = () => {
+        window.open('tel:+996555033377', '_self');
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/996555033377', '_blank');
+    window.open('https://wa.me/996555918355', '_blank');
   };
 
   const handleInstagramClick = () => {
@@ -50,7 +53,7 @@ const ContactsSection = () => {
   };
 
   return (
-    <Box 
+    <Box
       id="contacts"
       sx={{
         py: { xs: 8, md: 10 },
@@ -60,7 +63,7 @@ const ContactsSection = () => {
       <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2, md: 3 } }}>
         {/* Заголовок секции */}
         <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
-          <Typography 
+          <Typography
             variant="h2"
             sx={{
               fontWeight: 700,
@@ -70,7 +73,7 @@ const ContactsSection = () => {
           >
             Контакты
           </Typography>
-          <Typography 
+          <Typography
             variant="h6"
             sx={{
               color: theme.palette.text.secondary,
@@ -83,8 +86,8 @@ const ContactsSection = () => {
           </Typography>
         </Box>
 
-        <Grid 
-          container 
+        <Grid
+          container
           spacing={{ xs: 3, md: 4 }}
           justifyContent="center"
           alignItems="stretch"
@@ -93,7 +96,7 @@ const ContactsSection = () => {
           <Grid item xs={12} lg={4}>
             <Stack spacing={4} sx={{ height: '100%' }}>
               {/* Основная информация */}
-              <Card 
+              <Card
                 sx={{
                   p: { xs: 2, md: 3 },
                   background: 'linear-gradient(135deg, rgba(211, 47, 47, 0.02) 0%, rgba(66, 66, 66, 0.02) 100%)',
@@ -104,7 +107,7 @@ const ContactsSection = () => {
                   flexDirection: 'column',
                 }}
               >
-                <CardContent 
+                <CardContent
                   sx={{
                     p: 0,
                     flexGrow: 1,
@@ -112,7 +115,7 @@ const ContactsSection = () => {
                     flexDirection: 'column'
                   }}
                 >
-                  <Typography 
+                  <Typography
                     variant="h5"
                     sx={{
                       fontWeight: 600,
@@ -126,7 +129,7 @@ const ContactsSection = () => {
                   <Stack spacing={3}>
                     {/* Телефон */}
                     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                      <Box 
+                      <Box
                         sx={{
                           bgcolor: theme.palette.primary.main,
                           color: 'white',
@@ -142,31 +145,51 @@ const ContactsSection = () => {
                         <PhoneIcon sx={{ fontSize: '1.2rem' }} />
                       </Box>
                       <Box>
-                        <Typography 
-                          variant="h6"
+                        <Typography
+                          variant="body1"
                           sx={{
-                            color: theme.palette.primary.main,
-                            fontWeight: 600,
-                            cursor: 'pointer',
+                            color: theme.palette.text.primary,
+                            fontWeight: 500,
+                            mb: 0.5,
                           }}
-                          onClick={handlePhoneClick}
                         >
-                          +996 555 033 377
+                          Максим: <Typography 
+                            component="span"
+                            sx={{
+                              color: theme.palette.primary.main,
+                              fontWeight: 600,
+                              cursor: 'pointer',
+                            }}
+                            onClick={handlePhoneClick}
+                          >
+                            +996 555 918 355
+                          </Typography>
                         </Typography>
-                        <Typography 
-                          variant="body2"
+                        <Typography
+                          variant="body1"
                           sx={{
-                            color: theme.palette.text.secondary
+                            color: theme.palette.text.primary,
+                            fontWeight: 500,
                           }}
                         >
-                          Основной номер для заказов
+                          Оля: <Typography 
+                            component="span"
+                            sx={{
+                                color: theme.palette.primary.main,
+                                fontWeight: 600,
+                                cursor: 'pointer',
+                            }}
+                            onClick={handlePhoneClickOlya}
+                          >
+                            +996 555 033 377
+                          </Typography>
                         </Typography>
                       </Box>
                     </Box>
 
                     {/* Адрес */}
                     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                      <Box 
+                      <Box
                         sx={{
                           bgcolor: theme.palette.primary.main,
                           color: 'white',
@@ -182,7 +205,7 @@ const ContactsSection = () => {
                         <LocationOnIcon sx={{ fontSize: '1.2rem' }} />
                       </Box>
                       <Box>
-                        <Typography 
+                        <Typography
                           variant="body1"
                           sx={{
                             color: theme.palette.text.primary,
@@ -192,7 +215,7 @@ const ContactsSection = () => {
                         >
                           Байтик Баатыра, 36/3
                         </Typography>
-                        <Typography 
+                        <Typography
                           variant="body2"
                           sx={{
                             color: theme.palette.text.secondary,
@@ -201,7 +224,7 @@ const ContactsSection = () => {
                         >
                           завод Дастан, Бишкек, Кыргызстан
                         </Typography>
-                        <Button 
+                        <Button
                           startIcon={<DirectionsCarIcon />}
                           onClick={handleMapClick}
                           sx={{
@@ -219,7 +242,7 @@ const ContactsSection = () => {
 
                     {/* График работы */}
                     <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                      <Box 
+                      <Box
                         sx={{
                           bgcolor: theme.palette.primary.main,
                           color: 'white',
@@ -235,7 +258,7 @@ const ContactsSection = () => {
                         <ScheduleIcon sx={{ fontSize: '1.2rem' }} />
                       </Box>
                       <Box>
-                        <Typography 
+                        <Typography
                           variant="body1"
                           sx={{
                             color: theme.palette.text.primary,
@@ -243,17 +266,19 @@ const ContactsSection = () => {
                             mb: 0.5,
                           }}
                         >
-                          Работаем по предварительному звонку
+                            Приезжать по предварительному звонку!
                         </Typography>
-                        <Typography 
+                        <Typography
                           variant="body2"
                           sx={{
                             color: theme.palette.text.secondary
                           }}
                         >
-                          Понедельник - Суббота: 9:00 - 18:00
+                          Понедельник - Пятница: 07:00 - 16:00
                           <br />
-                          Воскресенье: по договоренности
+                          Суббота: 08:00 - 10:00
+                          <br/>
+                          Воскресенье: закрыто
                         </Typography>
                       </Box>
                     </Box>
@@ -262,14 +287,14 @@ const ContactsSection = () => {
               </Card>
 
               {/* Социальные сети */}
-              <Card 
+              <Card
                 sx={{
                   p: { xs: 2, md: 3 },
                   minHeight: 120
                 }}
               >
                 <CardContent sx={{ p: 0 }}>
-                  <Typography 
+                  <Typography
                     variant="h6"
                     sx={{
                       fontWeight: 600,
@@ -280,7 +305,7 @@ const ContactsSection = () => {
                     Мы в социальных сетях
                   </Typography>
                   <Stack direction="row" spacing={2}>
-                    <Button 
+                    <Button
                       startIcon={<WhatsAppIcon />}
                       onClick={handleWhatsAppClick}
                       variant="contained"
@@ -296,7 +321,7 @@ const ContactsSection = () => {
                     >
                       WhatsApp
                     </Button>
-                    <Button 
+                    <Button
                       startIcon={<InstagramIcon />}
                       onClick={handleInstagramClick}
                       variant="contained"
@@ -320,7 +345,7 @@ const ContactsSection = () => {
 
           {/* 2GIS Maps Integration */}
           <Grid item xs={12} lg={8}>
-            <Card 
+            <Card
               sx={{
                 height: '100%',
                 minHeight: '600px',
@@ -331,7 +356,7 @@ const ContactsSection = () => {
                 position: 'relative',
               }}
             >
-              <DoubleGisMapComponent 
+              <DoubleGisMapComponent
                 center={{ lat: 42.848495, lng: 74.607330 }} // Координаты MaxMetall для 2ГИС
                 zoom={16}
                 height="100%"

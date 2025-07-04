@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:pagemap="http://www.google.com/schemas/sitemap-pagemap/1.0"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Главная страница -->
+    <url>
+        <loc>https://maxmetall.kg/</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <mobile:mobile/>
+        
+        <!-- Изображения на главной странице -->
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/hero-bg.jpg</image:loc>
+            <image:caption>MaxMetall - Изделия из нержавеющей стали в Бишкеке</image:caption>
+            <image:title>MaxMetall - Главная страница</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/favicon.jpg</image:loc>
+            <image:caption>MaxMetall логотип</image:caption>
+            <image:title>MaxMetall Logo</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <!-- Изображения продукции -->
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/products/railings.jpg</image:loc>
+            <image:caption>Перила и ограждения из нержавеющей стали</image:caption>
+            <image:title>Перила из нержавейки MaxMetall</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/products/pool-stairs.jpg</image:loc>
+            <image:caption>Лестницы для бассейнов из нержавеющей стали</image:caption>
+            <image:title>Лестницы для бассейнов MaxMetall</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/products/shower-rods.jpg</image:loc>
+            <image:caption>Карнизы для ванных комнат из нержавеющей стали</image:caption>
+            <image:title>Карнизы для ванной MaxMetall</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/products/accessibility-rails.jpg</image:loc>
+            <image:caption>Поручни ЛОВЗ для людей с ограниченными возможностями</image:caption>
+            <image:title>Поручни ЛОВЗ MaxMetall</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/products/flagpoles.jpg</image:loc>
+            <image:caption>Флагштоки из нержавеющей стали</image:caption>
+            <image:title>Флагштоки MaxMetall</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/products/pipes.jpg</image:loc>
+            <image:caption>Трубы из нержавеющей стали</image:caption>
+            <image:title>Трубы из нержавейки MaxMetall</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/products/hardware.jpg</image:loc>
+            <image:caption>Фурнитура и комплектующие из нержавеющей стали</image:caption>
+            <image:title>Фурнитура MaxMetall</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/products/capsules.jpg</image:loc>
+            <image:caption>Капсулы времени из нержавеющей стали</image:caption>
+            <image:title>Капсулы времени MaxMetall</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <!-- Изображения галереи -->
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/vertical-1.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Перила из нержавеющей стали</image:caption>
+            <image:title>Перила из нержавейки - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/vertical-2.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Перила для лестницы</image:caption>
+            <image:title>Перила для лестницы - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/vertical-3.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Флагштоки</image:caption>
+            <image:title>Флагштоки - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/square-1.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Перила AUCA</image:caption>
+            <image:title>Перила AUCA - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/square-2.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Лестница в бассейн</image:caption>
+            <image:title>Лестница в бассейн - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/square-3.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Карнизы для ванной</image:caption>
+            <image:title>Карнизы для ванной - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/square-4.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Капсула времени</image:caption>
+            <image:title>Капсула времени - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/horizontal-1.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Карниз для ванной</image:caption>
+            <image:title>Карниз для ванной - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/horizontal-2.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Лестница в бассейн</image:caption>
+            <image:title>Лестница в бассейн - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/horizontal-3.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Перила и ограждения</image:caption>
+            <image:title>Перила и ограждения - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/gallery/horizontal-4.jpg</image:loc>
+            <image:caption>Работы MaxMetall - Изделия из нержавеющей стали</image:caption>
+            <image:title>Изделия из нержавеющей стали - галерея работ</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <!-- Изображения партнеров -->
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-1.png</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 1</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-2.png</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 2</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-3.png</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 3</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-4.jpg</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 4</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-5.jpg</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 5</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-6.png</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 6</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-7.jpg</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 7</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-8.png</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 8</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://maxmetall.kg/images/partners/partner-9.png</image:loc>
+            <image:caption>Партнер MaxMetall</image:caption>
+            <image:title>Партнер 9</image:title>
+            <image:license>https://maxmetall.kg/</image:license>
+        </image:image>
+    </url>
+
+    <!-- Секция продукции -->
+    <url>
+        <loc>https://maxmetall.kg/#products</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Секция галереи -->
+    <url>
+        <loc>https://maxmetall.kg/#gallery</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Секция отзывов -->
+    <url>
+        <loc>https://maxmetall.kg/#reviews</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Секция достижений -->
+    <url>
+        <loc>https://maxmetall.kg/#achievements</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Секция контактов -->
+    <url>
+        <loc>https://maxmetall.kg/#contacts</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Дополнительные URL с якорными ссылками для лучшего SEO -->
+    <url>
+        <loc>https://maxmetall.kg/#hero</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/#partners</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Альтернативные URL для разных языков -->
+    <url>
+        <loc>https://maxmetall.kg/?lang=ru</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/?lang=ky</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Дополнительные страницы для SEO -->
+    <url>
+        <loc>https://maxmetall.kg/perila-iz-nerzhaveyuschey-stali-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/lestnicy-dlya-basseyna-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/karnizy-dlya-vannoy-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/poruchni-lovz-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/flagshtoki-iz-nerzhaveyuschey-stali-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/truby-iz-nerzhaveyuschey-stali-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/furnitura-iz-nerzhaveyuschey-stali-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/kapsuly-vremeni-iz-nerzhaveyuschey-stali-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/argonnaya-svarka-nerzhaveyuschey-stali-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/aisi-304-316-201-nerzhaveyuschaya-stal-bishkek</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Региональные страницы -->
+    <url>
+        <loc>https://maxmetall.kg/osh</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/dzhalal-abad</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/karakol</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/naryn</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/talas</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <mobile:mobile/>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/batken</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <mobile:mobile/>
+    </url>
+
+    <!-- Дополнительные технические страницы -->
+    <url>
+        <loc>https://maxmetall.kg/robots.txt</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+    <url>
+        <loc>https://maxmetall.kg/sitemap.xml</loc>
+        <lastmod>2024-12-20T12:00:00+06:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+</urlset>
