@@ -21,11 +21,11 @@ const Header = () => {
   const isVerySmallMobile = useMediaQuery('(max-width:400px)');
 
   const handlePhoneClick = () => {
-    window.open('tel:+996555033377', '_self');
+    window.open('tel:+996555918355', '_self');
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/996555033377', '_blank');
+    window.open('https://wa.me/996555918355', '_blank');
   };
 
   const scrollToSection = (sectionId) => {
@@ -64,19 +64,29 @@ const Header = () => {
           >
             <Box
               sx={{
-                width: { xs: 36, sm: 40, md: 50 },
-                height: { xs: 36, sm: 40, md: 50 },
-                background: 'linear-gradient(135deg, #d32f2f 0%, #424242 100%)',
+                width: { xs: 50, sm: 50, md: 50 },
+                height: { xs: 50, sm: 50, md: 50 },
                 borderRadius: 2,
+                overflow: 'hidden',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'white',
-                fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },
-                fontWeight: 'bold',
+                bgcolor: '#000',
+                p: '10px',
               }}
             >
-              M
+              <Image
+                src="/images/favicon.jpg"
+                alt="MaxMetall Logo"
+                width={50}
+                height={50}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: '4px',
+                }}
+              />
             </Box>
             <Box>
                 <Typography
@@ -89,7 +99,7 @@ const Header = () => {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     lineHeight: 1,
-                    fontSize: { xs: '0.95rem', sm: '1.25rem', md: '1.5rem' },
+                    fontSize: { xs: '1.3rem', sm: '1.4rem', md: '1.5rem' },
                     whiteSpace: 'nowrap'
                   }}
                 >
@@ -100,7 +110,7 @@ const Header = () => {
                     variant="caption"
                     sx={{
                       color: theme.palette.text.secondary,
-                      fontSize: { xs: '0.65rem', sm: '0.7rem', md: '0.8rem' },
+                      fontSize: { xs: '0.8rem', sm: '0.8rem', md: '0.8rem' },
                       display: 'block',
                       lineHeight: 1,
                     }}
@@ -129,7 +139,7 @@ const Header = () => {
                   fontSize: { sm: '1rem', md: '1.2rem' }
                 }}
               >
-                +996 555 033 377
+                +996 555 918 355
               </Typography>
             )}
             
@@ -141,27 +151,27 @@ const Header = () => {
                 '&:hover': {
                   bgcolor: 'rgba(211, 47, 47, 0.2)',
                 },
-                width: { xs: 36, md: 40 },
-                height: { xs: 36, md: 40 },
+                width: { xs: 42, md: 44 },
+                height: { xs: 42, md: 44 },
               }}
             >
-              <PhoneIcon fontSize={isSmallMobile ? "small" : "medium"} />
+              <PhoneIcon fontSize={isSmallMobile ? "medium" : "medium"} />
             </IconButton>
             
             <Button
               onClick={handleWhatsAppClick}
-              startIcon={<WhatsAppIcon fontSize={isSmallMobile ? "small" : "medium"} />}
+              startIcon={<WhatsAppIcon fontSize={isSmallMobile ? "medium" : "medium"} />}
               variant="contained"
-              size={isSmallMobile ? "small" : "medium"}
+              size={isSmallMobile ? "medium" : "medium"}
               sx={{
                 background: '#25D366',
                 color: 'white',
                 '&:hover': {
                   background: '#22c55e',
                 },
-                px: { xs: 1.5, sm: 2, md: 3 },
-                py: { xs: 0.7, md: 0.9 },
-                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.9rem' },
+                px: { xs: 2, sm: 2.5, md: 3 },
+                py: { xs: 1, md: 1.1 },
+                fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.9rem' },
                 whiteSpace: 'nowrap',
               }}
             >

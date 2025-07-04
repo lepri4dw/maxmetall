@@ -6,7 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "analyze": "cross-env ANALYZE=true next build",
+    "seo-check": "echo 'Checking SEO optimization...' && node scripts/seo-check.js",
+    "sitemap": "node scripts/generate-sitemap.js",
+    "robots": "node scripts/generate-robots.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

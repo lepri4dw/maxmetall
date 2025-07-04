@@ -14,8 +14,8 @@ const HeroSection = () => {
   const theme = useTheme();
   const isMobile = theme.breakpoints.down('sm');
 
-  const handleCallClick = () => {
-    window.open('tel:+996555033377', '_self');
+  const handlePhoneClick = () => {
+    window.open('tel:+996555918355', '_self');
   };
 
   const scrollToProducts = () => {
@@ -73,6 +73,7 @@ const HeroSection = () => {
       }}>
         {/* Заголовок с градиентом */}
         <Typography
+          component="h1"
           variant="h1"
           sx={{
             fontWeight: 700,
@@ -152,7 +153,7 @@ const HeroSection = () => {
                 }} 
               />
             }
-            onClick={() => window.open('https://wa.me/996555033377', '_blank')}
+            onClick={() => window.open('https://wa.me/996555918355', '_blank')}
             sx={{
               py: 1.8,
               px: { xs: 4, md: 5 },
