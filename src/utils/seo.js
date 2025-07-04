@@ -167,16 +167,16 @@ export const generateMainPageMeta = () => {
     
     // Open Graph
     openGraph: {
-      title: `${COMPANY_SEO.name} - Изделия из нержавеющей стали премиум класса в Бишкеке`,
-      description: `Производство изделий из нержавеющей стали в Бишкеке. Перила, ограждения, лестницы для бассейнов, карнизы, поручни ЛОВЗ. ${COMPANY_SEO.experience} опыта, собственное производство, гарантия качества. ☎ ${COMPANY_SEO.phone}`,
+      title: `MaxMetall | Перила, лестницы из нержавейки в Бишкеке`,
+      description: `Изделия из нержавеющей стали: перила, лестницы, карнизы, поручни. Высокое качество и индивидуальный дизайн. Звоните: ${COMPANY_SEO.phone}`,
       url: canonical,
       siteName: COMPANY_SEO.name,
       locale: 'ru_KG',
       type: 'website',
       images: [{
-        url: 'https://maxmetall.kg/images/og-image.jpg',
-        width: 1200,
-        height: 630,
+        url: 'https://maxmetall.kg/images/favicon.jpg',
+        width: 1000,
+        height: 1000,
         alt: `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке`
       }]
     },
@@ -184,9 +184,9 @@ export const generateMainPageMeta = () => {
     // Twitter
     twitter: {
       card: 'summary_large_image',
-      title: `${COMPANY_SEO.name} - Нержавеющая сталь премиум класса в Бишкеке`,
-      description: `Производство изделий из нержавеющей стали в Бишкеке. ${COMPANY_SEO.experience} опыта. ☎ ${COMPANY_SEO.phone}`,
-      images: ['https://maxmetall.kg/images/og-image.jpg']
+      title: `MaxMetall | Перила, лестницы из нержавейки в Бишкеке`,
+      description: `Изделия из нержавеющей стали: перила, лестницы, карнизы, поручни. Высокое качество. ☎ ${COMPANY_SEO.phone}`,
+      images: ['https://maxmetall.kg/images/favicon.jpg']
     }
   };
 };
@@ -202,7 +202,7 @@ export const generateMainPageJsonLd = () => {
     legalName: COMPANY_SEO.fullName,
     url: 'https://maxmetall.kg',
     logo: 'https://maxmetall.kg/images/favicon.jpg',
-    image: 'https://maxmetall.kg/images/og-image.jpg',
+    image: 'https://maxmetall.kg/images/favicon.jpg',
     description: COMPANY_SEO.description,
     
     // Контакты

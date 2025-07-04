@@ -164,6 +164,16 @@
       "source": "/services",
       "destination": "/#products",
       "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.php/:path*",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "rewrites": [

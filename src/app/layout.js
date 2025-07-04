@@ -27,7 +27,7 @@ export default function RootLayout({children}) {
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-            
+            <link rel="canonical" href="https://maxmetall.kg/" />
             {/* Primary Meta Tags */}
             <title>{meta.title}</title>
             <meta name="title" content={meta.title} />
@@ -48,6 +48,8 @@ export default function RootLayout({children}) {
             <meta property="og:description" content={meta.openGraph.description} />
             <meta property="og:image" content={meta.openGraph.images[0].url} />
             <meta property="og:image:width" content={meta.openGraph.images[0].width} />
+            <meta name="telegram:title" content="MaxMetall | Перила, лестницы из нержавейки в Бишкеке" />
+            <meta name="telegram:description" content="Изделия из нержавеющей стали премиум класса. Индивидуальный дизайн." />
             <meta property="og:image:height" content={meta.openGraph.images[0].height} />
             <meta property="og:image:alt" content={meta.openGraph.images[0].alt} />
             <meta property="og:site_name" content={meta.openGraph.siteName} />
