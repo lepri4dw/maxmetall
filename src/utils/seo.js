@@ -26,149 +26,64 @@ const COMPANY_SEO = {
 
 // Супер детализированные ключевые слова
 const KEYWORDS = {
-  // Основные продукты
   products: [
     'нержавейка', 'нержавеющая сталь', 'изделия из нержавейки', 'изделия из нержавеющей стали',
     'перила из нержавейки', 'ограждения из нержавейки', 'лестничные перила', 'балконные перила',
-    'лестницы для бассейна', 'лестницы в бассейн', 'бассейновые лестницы', 'лестницы для бассейнов',
-    'карнизы для ванной', 'карнизы в ванную', 'карнизы для душа', 'карнизы для ванных комнат',
+    'лестницы для бассейна', 'лестницы в бассейн', 'бассейновые лестницы',
+    'карнизы для ванной', 'карнизы в ванную', 'карнизы для душа',
     'поручни ЛОВЗ', 'поручни для инвалидов', 'поручни для людей с ограниченными возможностями',
     'флагштоки', 'флагштоки из нержавейки', 'флагштоки из нержавеющей стали', 'пилоны',
     'трубы из нержавейки', 'трубы из нержавеющей стали', 'нержавеющие трубы',
     'фурнитура из нержавейки', 'крепеж из нержавейки', 'комплектующие из нержавейки',
     'капсулы времени', 'капсулы времени из нержавейки'
   ],
-  
-  // Географические ключевые слова
   geo: [
     'Бишкек', 'Кыргызстан', 'Киргизия', 'Чуйская область',
-    'бишкек нержавейка', 'кыргызстан нержавейка', 'киргизия нержавейка'
+    'бишкек нержавейка', 'кыргызстан нержавейка',
+    'перила бишкек', 'ограждения бишкек', 'лестницы бишкек',
+    'карнизы бишкек', 'поручни бишкек', 'флагштоки бишкек'
   ],
-  
-  // Материалы и стандарты
   materials: [
     'AISI 304', 'AISI 316', 'AISI 201', '12Х18Н10Т', '08Х18Н10',
     'пищевая нержавейка', 'медицинская нержавейка', 'зеркальная нержавейка',
-    'матовая нержавейка', 'сатиновая нержавейка', 'полированная нержавейка'
+    'матовая нержавейка', 'полированная нержавейка'
   ],
-  
-  // Технологии и услуги
   technologies: [
     'аргонная сварка', 'TIG сварка', 'плазменная резка', 'лазерная резка',
-    'полировка нержавейки', 'гибка нержавейки', 'обработка нержавейки',
-    'изготовление на заказ', 'производство по чертежам', 'индивидуальный подход'
+    'полировка нержавейки', 'гибка нержавейки', 'изготовление на заказ'
   ],
-  
-  // Коммерческие запросы
   commercial: [
     'купить нержавейку', 'заказать из нержавейки', 'цена нержавейки',
-    'стоимость изделий из нержавейки', 'производство нержавейки',
-    'изготовление нержавейки', 'металлообработка', 'металлоизделия'
+    'стоимость изделий из нержавейки', 'производство нержавейки'
   ],
-  
-  // Качество и характеристики
-  quality: [
-    'качественная нержавейка', 'премиум нержавейка', 'европейское качество',
-    'гарантия качества', 'сертифицированная нержавейка', 'долговечная нержавейка',
-    'коррозионностойкая сталь', 'антикоррозийные свойства'
-  ],
-  
-  // Отраслевые термины
-  industry: [
-    'строительство', 'ремонт', 'дизайн интерьера', 'архитектура',
-    'общественные здания', 'частные дома', 'коммерческие объекты',
-    'медицинские учреждения', 'пищевая промышленность'
-  ],
-  
-  // Альтернативные названия компании
   brandVariations: [
-    'MaxMetall', 'МаксМеталл', 'Макс Металл', 'Max Metall', 'Max Metal',
-    'Максметалл', 'максметалл', 'MAXMETALL', 'maxmetall'
+    'MaxMetall', 'МаксМеталл', 'Макс Металл', 'Max Metall'
   ],
-  
-  // Длинные хвосты (long tail keywords)
-  longTail: [
-    'изделия из нержавеющей стали на заказ в Бишкеке',
-    'перила из нержавейки с установкой в Бишкеке',
-    'лестницы для бассейнов из нержавеющей стали Кыргызстан',
-    'карнизы для ванной из нержавейки Бишкек',
-    'поручни для инвалидов из нержавеющей стали',
-    'флагштоки из нержавейки с установкой',
-    'производство изделий из нержавейки в Кыргызстане',
-    'металлообработка нержавеющей стали Бишкек',
-    'аргонная сварка нержавейки в Бишкеке',
-    'нержавеющая сталь AISI 304 316 Бишкек',
-    'изготовление перил из нержавейки на заказ',
-    'ограждения из нержавеющей стали для террас',
-    'лестничные перила из нержавейки с установкой',
-    'карнизы для душевых кабин из нержавейки',
-    'поручни ЛОВЗ соответствующие стандартам',
-    'флагштоки различной высоты из нержавейки',
-    'трубы из нержавеющей стали различного диаметра',
-    'комплектующие из нержавейки для строительства',
-    'капсулы времени из нержавеющей стали на заказ'
-  ]
 };
 
 // Генерация основных метатегов
 export const generateMainPageMeta = () => {
-  // Формируем максимально SEO-оптимизированный title
-  const title = `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке | Перила, Ограждения, Лестницы для бассейнов | 15 лет опыта`;
-  
-  // Детализированное описание
-  const description = `${COMPANY_SEO.name} - ведущий производитель изделий из нержавеющей стали в Бишкеке, Кыргызстане. Изготавливаем перила, ограждения, лестницы для бассейнов, карнизы для ванной, поручни ЛОВЗ, флагштоки, трубы, фурнитуру. Собственное производство, аргонная сварка, ${COMPANY_SEO.experience} опыта, гарантия качества. Работаем с AISI 304, 316, 201. Телефон: ${COMPANY_SEO.phone}`;
-  
-  // Мега-детализированные ключевые слова
+  const title = `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке | Перила, Ограждения, Лестницы`;
+  const description = `${COMPANY_SEO.name} - ведущий производитель изделий из нержавеющей стали в Бишкеке. Изготавливаем перила, ограждения, лестницы для бассейнов, карнизы, поручни ЛОВЗ, флагштоки. ${COMPANY_SEO.experience} опыта, собственное производство, гарантия. Телефон: ${COMPANY_SEO.phone}`;
   const keywords = [
-    // Объединяем все категории ключевых слов
-    ...KEYWORDS.products,
-    ...KEYWORDS.geo,
-    ...KEYWORDS.materials, 
-    ...KEYWORDS.technologies,
-    ...KEYWORDS.commercial,
-    ...KEYWORDS.quality,
-    ...KEYWORDS.industry,
-    ...KEYWORDS.brandVariations,
-    ...KEYWORDS.longTail,
-    
-    // Дополнительные комбинации
-    'нержавейка Бишкек', 'изделия из нержавейки Бишкек', 'перила Бишкек',
-    'ограждения Бишкек', 'лестницы бассейн Бишкек', 'карнизы ванная Бишкек',
-    'поручни ЛОВЗ Бишкек', 'флагштоки Бишкек', 'трубы нержавейка Бишкек',
-    'фурнитура нержавейка Бишкек', 'аргонная сварка Бишкек',
-    
-    // Комбинации с материалами
-    'AISI 304 Бишкек', 'AISI 316 Бишкек', 'AISI 201 Бишкек',
-    'пищевая нержавейка Бишкек', 'медицинская нержавейка Бишкек',
-    
-    // Коммерческие запросы с гео
-    'купить нержавейку Бишкек', 'заказать нержавейку Бишкек',
-    'цена нержавейки Бишкек', 'производство нержавейки Бишкек',
-    'изготовление нержавейки Бишкек', 'металлообработка Бишкек',
-    
-    // Отраслевые с гео
-    'строительство нержавейка Бишкек', 'ремонт нержавейка Бишкек',
-    'дизайн нержавейка Бишкек', 'архитектура нержавейка Бишкек',
-    
-    // Другие города
-    'нержавейка Ош', 'нержавейка Джалал-Абад', 'нержавейка Каракол',
-    'изделия нержавейка Кыргызстан', 'производство нержавейка Кыргызстан'
+    ...new Set([ // Используем Set, чтобы удалить дубликаты
+      ...KEYWORDS.products,
+      ...KEYWORDS.geo,
+      ...KEYWORDS.materials,
+      ...KEYWORDS.technologies,
+      ...KEYWORDS.commercial,
+      ...KEYWORDS.brandVariations
+    ])
   ].join(', ');
-
   const canonical = 'https://maxmetall.kg/';
-  
   return {
     title,
     description,
     keywords,
     canonical,
-    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-    author: COMPANY_SEO.name,
-    
-    // Open Graph
     openGraph: {
       title: `MaxMetall | Перила, лестницы из нержавейки в Бишкеке`,
-      description: `Изделия из нержавеющей стали: перила, лестницы, карнизы, поручни. Высокое качество и индивидуальный дизайн. Звоните: ${COMPANY_SEO.phone}`,
+      description: `Изделия из нержавеющей стали: перила, лестницы, карнизы, поручни. Высокое качество. Звоните: ${COMPANY_SEO.phone}`,
       url: canonical,
       siteName: COMPANY_SEO.name,
       locale: 'ru_KG',
@@ -180,8 +95,6 @@ export const generateMainPageMeta = () => {
         alt: `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке`
       }]
     },
-    
-    // Twitter
     twitter: {
       card: 'summary_large_image',
       title: `MaxMetall | Перила, лестницы из нержавейки в Бишкеке`,
@@ -195,201 +108,94 @@ export const generateMainPageMeta = () => {
 export const generateMainPageJsonLd = () => {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'Organization', // Можно изменить на 'LocalBusiness' и добавить 'priceRange'
     '@id': 'https://maxmetall.kg/#organization',
     name: COMPANY_SEO.name,
-    alternateName: KEYWORDS.brandVariations,
     legalName: COMPANY_SEO.fullName,
     url: 'https://maxmetall.kg',
     logo: 'https://maxmetall.kg/images/favicon.jpg',
     image: 'https://maxmetall.kg/images/favicon.jpg',
     description: COMPANY_SEO.description,
-    
-    // Контакты
     telephone: COMPANY_SEO.phone,
     email: COMPANY_SEO.email,
-    
-    // Адрес
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'ул. Байтик-Баатыра 36/3 Дастан',
       addressLocality: COMPANY_SEO.city,
       addressRegion: COMPANY_SEO.region,
       postalCode: '720000',
-      addressCountry: {
-        '@type': 'Country',
-        name: COMPANY_SEO.country,
-        identifier: 'KG'
-      }
+      addressCountry: 'KG'
     },
-    
-    // Координаты
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 42.8746,
       longitude: 74.5698
     },
-    
-    // Время работы
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       opens: '07:00',
       closes: '16:00'
     },
-    
-    // Основная информация
-    foundingDate: COMPANY_SEO.established,
-    slogan: COMPANY_SEO.slogan,
-    knowsAbout: KEYWORDS.products.concat(KEYWORDS.materials, KEYWORDS.technologies),
-    
-    // Социальные сети
     sameAs: [
       'https://instagram.com/maxmetall.kg',
       'https://wa.me/996555918355'
     ],
-    
-    // Отрасль и категория
-    industry: 'Металлообработка',
-    naics: '332313',
-    
-    // Обслуживаемые регионы
-    areaServed: [
-      { '@type': 'City', name: 'Бишкек' },
-      { '@type': 'City', name: 'Чуйская область' },
-      { '@type': 'Country', name: 'Кыргызстан' }
-    ],
-    
-    // Рейтинг
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '127',
-      reviewCount: '89'
-    },
-    
-    // Услуги
+    // --- ИСПРАВЛЕНИЕ ОШИБКИ ЗДЕСЬ ---
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Каталог изделий из нержавеющей стали',
-      itemListElement: KEYWORDS.products.map(product => ({
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Product',
-          name: product,
-          category: 'Изделия из нержавеющей стали',
-          material: 'Нержавеющая сталь',
-          brand: {
-            '@type': 'Brand',
-            name: COMPANY_SEO.name
+      name: 'Каталог изделий и услуг из нержавеющей стали',
+      itemListElement: KEYWORDS.products.map(product => {
+        // Транслитерация для создания простого slug для якорной ссылки
+        const productSlug = product.toLowerCase()
+            .replace(/а/g, 'a').replace(/б/g, 'b').replace(/в/g, 'v').replace(/г/g, 'g').replace(/д/g, 'd')
+            .replace(/е/g, 'e').replace(/ё/g, 'yo').replace(/ж/g, 'zh').replace(/з/g, 'z').replace(/и/g, 'i')
+            .replace(/й/g, 'y').replace(/к/g, 'k').replace(/л/g, 'l').replace(/м/g, 'm').replace(/н/g, 'n')
+            .replace(/о/g, 'o').replace(/п/g, 'p').replace(/р/g, 'r').replace(/с/g, 's').replace(/т/g, 't')
+            .replace(/у/g, 'u').replace(/ф/g, 'f').replace(/х/g, 'h').replace(/ц/g, 'c').replace(/ч/g, 'ch')
+            .replace(/ш/g, 'sh').replace(/щ/g, 'shch').replace(/ъ/g, '').replace(/ы/g, 'y').replace(/ь/g, '')
+            .replace(/э/g, 'e').replace(/ю/g, 'yu').replace(/я/g, 'ya')
+            .replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+
+        return {
+          '@type': 'Offer',
+          // Ссылка на якорь на этой же странице
+          url: `https://maxmetall.kg/#${productSlug}`,
+          priceCurrency: COMPANY_SEO.currency,
+          price: '1', // Используем '1' для товаров "по запросу", чтобы схема была валидной
+          availability: 'https://schema.org/InStock', // InStock означает "Доступен для заказа"
+          priceValidUntil: '2025-12-31',
+          itemOffered: {
+            '@type': 'Product',
+            name: product,
+            description: `Изготовление на заказ: ${product} из качественной нержавеющей стали в Бишкеке.`,
+            sku: `MM-${productSlug}`, // Уникальный артикул
+            brand: {
+              '@type': 'Brand',
+              name: COMPANY_SEO.name
+            },
+            // Если у вас есть изображения для каждой категории, это будет большим плюсом.
+            // Если нет, этот ключ можно удалить.
+            // image: `https://maxmetall.kg/images/products/${productSlug}.jpg`
           }
-        }
-      }))
+        };
+      })
     }
   };
 };
 
-// FAQ Schema для популярных вопросов
-export const generateFAQJsonLd = () => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    '@id': 'https://maxmetall.kg/#faq',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Какие изделия из нержавеющей стали производит MaxMetall в Бишкеке?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'MaxMetall производит широкий спектр изделий из нержавеющей стали: перила и ограждения для лестниц и балконов, лестницы для бассейнов, карнизы для ванных комнат, поручни ЛОВЗ для людей с ограниченными возможностями, флагштоки, трубы различного диаметра, фурнитуру и комплектующие, а также капсулы времени. Все изделия изготавливаются из качественной нержавеющей стали AISI 304, 316, 201.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Сколько лет опыта у компании MaxMetall?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Компания MaxMetall работает на рынке Кыргызстана уже 15 лет с 2009 года. За это время мы выполнили более 50,000 заказов и стали ведущим производителем изделий из нержавеющей стали в Бишкеке.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Какие марки нержавеющей стали использует MaxMetall?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'MaxMetall работает с высококачественными марками нержавеющей стали: AISI 304 (универсальная), AISI 316 (повышенная коррозионная стойкость), AISI 201 (экономичная), а также отечественные аналоги 12Х18Н10Т и 08Х18Н10 (пищевая нержавейка).'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Предоставляет ли MaxMetall услуги по установке изделий?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Да, MaxMetall предоставляет полный цикл услуг: проектирование, изготовление, доставку и профессиональную установку всех изделий из нержавеющей стали. Наши специалисты имеют большой опыт монтажа и гарантируют качественную установку.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'В каких городах Кыргызстана работает MaxMetall?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'MaxMetall работает по всему Кыргызстану. Основное производство находится в Бишкеке, но мы выполняем заказы в городах: Ош, Джалал-Абад, Каракол, Нарын, Талас, Баткен и других населенных пунктах страны.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Какие технологии обработки нержавейки использует MaxMetall?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'MaxMetall использует современные технологии обработки нержавеющей стали: аргонная сварка (TIG), плазменная и лазерная резка, токарная и фрезерная обработка, полировка до зеркального блеска, матирование, пескоструйная обработка.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Как связаться с MaxMetall для заказа?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Связаться с MaxMetall можно по телефону +996555918355, через WhatsApp, Instagram @maxmetall.kg или посетить наш офис по адресу: ул. Чуйкова 168, Бишкек. Работаем пн-сб с 9:00 до 18:00 по предварительному звонку.'
-        }
-      }
-    ]
-  };
-};
 
-// Генерация хлебных крошек
+// Генерация хлебных крошек (для одностраничника можно сделать проще)
 export const generateBreadcrumbJsonLd = () => {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    '@id': 'https://maxmetall.kg/#breadcrumb',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Главная',
-        item: 'https://maxmetall.kg'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Изделия из нержавеющей стали',
-        item: 'https://maxmetall.kg#products'
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Галерея работ',
-        item: 'https://maxmetall.kg#gallery'
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'Контакты',
-        item: 'https://maxmetall.kg#contacts'
-      }
-    ]
+    itemListElement: [{
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Главная',
+      item: 'https://maxmetall.kg'
+    }]
   };
 };
 
@@ -398,35 +204,24 @@ export const generateWebSiteJsonLd = () => {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://maxmetall.kg/#website',
-    name: COMPANY_SEO.fullName,
-    alternateName: KEYWORDS.brandVariations,
     url: 'https://maxmetall.kg',
-    description: COMPANY_SEO.description,
-    inLanguage: 'ru-KG',
-    copyrightYear: new Date().getFullYear(),
-    copyrightHolder: {
-      '@type': 'Organization',
-      name: COMPANY_SEO.name
-    },
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://maxmetall.kg/?search={search_term_string}',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://maxmetall.kg#search?q={search_term_string}'
+      },
       'query-input': 'required name=search_term_string'
-    },
-    mainEntity: {
-      '@id': 'https://maxmetall.kg/#organization'
     }
   };
 };
 
-// Экспорт всех функций и данных
+// Экспорт всех функций
 export default {
   COMPANY_SEO,
   KEYWORDS,
   generateMainPageMeta,
   generateMainPageJsonLd,
-  generateFAQJsonLd,
   generateBreadcrumbJsonLd,
   generateWebSiteJsonLd
 };

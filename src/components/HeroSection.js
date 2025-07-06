@@ -91,7 +91,7 @@ const HeroSection = () => {
           <Box
             component="span"
             sx={{
-              background: 'linear-gradient(135deg, #f5515f 0%, #ffd3d1 50%, #d3d3d3 100%)',
+              background: 'linear-gradient(135deg, #b71c1c 0%, #d32f2f 60%, #f5515f 70%, #ffd3d1 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -104,7 +104,7 @@ const HeroSection = () => {
                 left: 0,
                 width: '100%',
                 height: '2px',
-                background: 'linear-gradient(90deg, rgba(245,81,95,0) 0%, rgba(245,81,95,1) 50%, rgba(245,81,95,0) 100%)',
+                background: 'linear-gradient(90deg, rgba(183,28,28,0) 0%, rgba(183,28,28,1) 50%, rgba(183,28,28,0) 100%)',
               }
             }}
           >
@@ -130,11 +130,11 @@ const HeroSection = () => {
               fontSize: { xs: '1rem', md: '1.1rem' },
               fontWeight: 600,
               borderRadius: '50px',
-              background: 'linear-gradient(135deg, #d32f2f 0%, #f5515f 100%)',
-              boxShadow: '0 10px 20px rgba(211, 47, 47, 0.3)',
+              background: 'linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%)',
+              boxShadow: '0 10px 20px rgba(183, 28, 28, 0.3)',
               transition: 'all 0.3s ease',
               '&:hover': {
-                boxShadow: '0 15px 25px rgba(211, 47, 47, 0.4)',
+                boxShadow: '0 15px 25px rgba(183, 28, 28, 0.4)',
                 transform: 'translateY(-2px)'
               }
             }}
