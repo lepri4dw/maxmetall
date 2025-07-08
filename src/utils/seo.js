@@ -54,29 +54,34 @@ const availableImages = Object.values(imageMap);
 
 // Генерация основных метатегов
 export const generateMainPageMeta = () => {
-  const title = `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке | Рейтинг 5.0 ★★★★★`;
-  const description = `${COMPANY_SEO.name} - производитель изделий из нержавеющей стали в Бишкеке. Рейтинг 5.0 на основе 14 отзывов. Перила, ограждения, лестницы. ☎ ${COMPANY_SEO.phone}`;
+  const title = `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке | Перила, Ограждения, Лестницы для бассейнов | 15 лет опыта`;
+  const description = `${COMPANY_SEO.name} - ведущий производитель изделий из нержавеющей стали в Бишкеке, Кыргызстане. Изготавливаем перила, ограждения, лестницы для бассейнов, карнизы для ванной, поручни ЛОВЗ, флагштоки, трубы, фурнитуру. Собственное производство, аргонная сварка, ${COMPANY_SEO.experience} опыта, гарантия качества. Телефон: ${COMPANY_SEO.phone}`;
   const keywords = [...new Set(PRODUCTS_LIST)].join(', ');
   const canonical = `${COMPANY_SEO.domain}/`;
 
   return {
-    title, description, keywords, canonical,
+    title,
+    description,
+    keywords,
+    canonical,
     openGraph: {
-      title: `MaxMetall | Перила, лестницы из нержавейки в Бишкеке (Рейтинг 5.0)`,
-      description: `Изделия из нержавеющей стали: перила, лестницы, карнизы, поручни. Высокое качество. Звоните: ${COMPANY_SEO.phone}`,
+      title: `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке | Перила, Ограждения, Лестницы для бассейнов | 15 лет опыта`,
+      description: `${COMPANY_SEO.name} - ведущий производитель изделий из нержавеющей стали в Бишкеке, Кыргызстане. Изготавливаем перила, ограждения, лестницы для бассейнов, карнизы для ванной, поручни ЛОВЗ, флагштоки, трубы, фурнитуру. Собственное производство, аргонная сварка, ${COMPANY_SEO.experience} опыта, гарантия качества. Телефон: ${COMPANY_SEO.phone}`,
       url: canonical,
       siteName: COMPANY_SEO.name,
       locale: 'ru_KG',
       type: 'website',
       images: [{
         url: `${COMPANY_SEO.domain}/images/favicon.jpg`,
-        width: 1000, height: 1000, alt: `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке`
+        width: 1000,
+        height: 1000,
+        alt: `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке`
       }]
     },
     twitter: {
       card: 'summary_large_image',
-      title: `MaxMetall | Перила, лестницы из нержавейки в Бишкеке (Рейтинг 5.0)`,
-      description: `Изделия из нержавеющей стали: перила, лестницы, карнизы, поручни. Высокое качество. ☎ ${COMPANY_SEO.phone}`,
+      title: `${COMPANY_SEO.name} - Изделия из нержавеющей стали в Бишкеке | Перила, Ограждения, Лестницы для бассейнов | 15 лет опыта`,
+      description: `${COMPANY_SEO.name} - ведущий производитель изделий из нержавеющей стали в Бишкеке, Кыргызстане. Изготавливаем перила, ограждения, лестницы для бассейнов, карнизы для ванной, поручни ЛОВЗ, флагштоки, трубы, фурнитуру. Собственное производство, аргонная сварка, ${COMPANY_SEO.experience} опыта, гарантия качества. Телефон: ${COMPANY_SEO.phone}`,
       images: [`${COMPANY_SEO.domain}/images/favicon.jpg`]
     }
   };
@@ -132,14 +137,14 @@ export const generateMainPageJsonLd = () => {
       itemListElement: PRODUCTS_LIST.map((productName, index) => {
         // --- ВОЗВРАЩЕНА ПОЛНАЯ И НАДЕЖНАЯ ТРАНСЛИТЕРАЦИЯ ---
         const slug = productName.toLowerCase()
-            .replace(/а/g, 'a').replace(/б/g, 'b').replace(/в/g, 'v').replace(/г/g, 'g').replace(/д/g, 'd')
-            .replace(/е/g, 'e').replace(/ё/g, 'yo').replace(/ж/g, 'zh').replace(/з/g, 'z').replace(/и/g, 'i')
-            .replace(/й/g, 'y').replace(/к/g, 'k').replace(/л/g, 'l').replace(/м/g, 'm').replace(/н/g, 'n')
-            .replace(/о/g, 'o').replace(/п/g, 'p').replace(/р/g, 'r').replace(/с/g, 's').replace(/т/g, 't')
-            .replace(/у/g, 'u').replace(/ф/g, 'f').replace(/х/g, 'h').replace(/ц/g, 'c').replace(/ч/g, 'ch')
-            .replace(/ш/g, 'sh').replace(/щ/g, 'shch').replace(/ъ/g, '').replace(/ы/g, 'y').replace(/ь/g, '')
-            .replace(/э/g, 'e').replace(/ю/g, 'yu').replace(/я/g, 'ya')
-            .replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+          .replace(/а/g, 'a').replace(/б/g, 'b').replace(/в/g, 'v').replace(/г/g, 'g').replace(/д/g, 'd')
+          .replace(/е/g, 'e').replace(/ё/g, 'yo').replace(/ж/g, 'zh').replace(/з/g, 'z').replace(/и/g, 'i')
+          .replace(/й/g, 'y').replace(/к/g, 'k').replace(/л/g, 'l').replace(/м/g, 'm').replace(/н/g, 'n')
+          .replace(/о/g, 'o').replace(/п/g, 'p').replace(/р/g, 'r').replace(/с/g, 's').replace(/т/g, 't')
+          .replace(/у/g, 'u').replace(/ф/g, 'f').replace(/х/g, 'h').replace(/ц/g, 'c').replace(/ч/g, 'ch')
+          .replace(/ш/g, 'sh').replace(/щ/g, 'shch').replace(/ъ/g, '').replace(/ы/g, 'y').replace(/ь/g, '')
+          .replace(/э/g, 'e').replace(/ю/g, 'yu').replace(/я/g, 'ya')
+          .replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
 
         // --- ЛОГИКА ВЫБОРА ИЗОБРАЖЕНИЯ ---
         let imageUrl = '';

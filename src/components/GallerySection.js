@@ -33,13 +33,13 @@ const GallerySection = () => {
     { src: '/images/gallery/vertical-3.jpg', alt: 'Флагштоки', title: 'Флагштоки', type: 'vertical' },
     
     // Квадратные фото (1:1)
-    { src: '/images/gallery/square-1.jpg', alt: 'Перилла AUCA', title: 'Перилла AUCA', type: 'square' },
+    { src: '/images/gallery/square-1.jpg', alt: 'Перила для лестницы', title: 'Перила AUCA', type: 'square' },
     { src: '/images/gallery/square-2.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'square' },
-    { src: '/images/gallery/square-3.jpg', alt: 'Карнизы для ванной', title: 'Карнизы для ванной', type: 'square' },
+    { src: '/images/gallery/square-3.jpg', alt: 'Карниз для ванной', title: 'Карниз для ванной', type: 'square' },
     { src: '/images/gallery/square-4.jpg', alt: 'Капсула времени', title: 'Капсула времени', type: 'square' },
     
     // Горизонтальные фото (широкие) - соотношение примерно 4:3 или 3:2
-    { src: '/images/gallery/horizontal-1.jpg', alt: 'Карниз для ванной', title: 'Карниз для ванной', type: 'horizontal' },
+    { src: '/images/gallery/horizontal-1.jpg', alt: 'Перила для лестницы', title: 'Перила для лестницы', type: 'horizontal' },
     { src: '/images/gallery/horizontal-2.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'horizontal' },
     { src: '/images/gallery/horizontal-3.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'horizontal' },
     { src: '/images/gallery/horizontal-4.jpg', alt: 'Поручни ЛОВЗ', title: 'Поручни ЛОВЗ', type: 'horizontal' },

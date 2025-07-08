@@ -43,7 +43,7 @@ const AchievementsSection = () => {
 
   const statsItems = [
     { number: '50,000+', label: 'Довольных клиентов', icon: '👥', color: '#d32f2f' },
-    { number: '15', label: 'Лет на рынке', icon: '🏆', color: '#f5515f' },
+    { number: '15', label: 'Лет на рынке', icon: '🏆', color: '#d32f2f' },
     { number: '100%', label: 'Качественная сталь', icon: '⭐', color: '#424242' },
     { number: '500+', label: 'Проектов выполнено', icon: '🏗️', color: '#d32f2f' }];
 

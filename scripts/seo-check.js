@@ -45,7 +45,7 @@ function checkFileContent(filePath, searchTerms, description) {
   if (fs.existsSync(filePath)) {
     const content = fs.readFileSync(filePath, 'utf8');
     const foundTerms = searchTerms.filter(term => content.includes(term));
-    
+
     if (foundTerms.length === searchTerms.length) {
       success(`${description} - all required terms found`);
       score++;
@@ -62,7 +62,7 @@ function checkFileContent(filePath, searchTerms, description) {
 }
 
 console.log(`${colors.bold}📁 File Structure Check${colors.reset}`);
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 
 // Проверка основных файлов
 checkFile('public/robots.txt', 'robots.txt');
@@ -73,7 +73,7 @@ checkFile('src/utils/seo.js', 'SEO utilities');
 checkFile('src/utils/localSEO.js', 'Local SEO utilities');
 
 console.log(`\n${colors.bold}🔍 Content SEO Check${colors.reset}`);
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 
 // Проверка SEO контента
 checkFileContent(
@@ -101,7 +101,7 @@ checkFileContent(
 );
 
 console.log(`\n${colors.bold}🏢 Business Information Check${colors.reset}`);
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 
 // Проверка бизнес информации
 checkFileContent(
@@ -117,20 +117,28 @@ checkFileContent(
 );
 
 console.log(`\n${colors.bold}🎯 Keyword Density Check${colors.reset}`);
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 
 // Проверка плотности ключевых слов
-const keywordChecks = [
-  { file: 'src/utils/seo.js', keywords: ['нержавейка', 'MaxMetall', 'Бишкек', 'перила', 'ограждения'] },
-  { file: 'src/components/Footer.js', keywords: ['нержавеющей стали', 'изделия', 'производство'] },
-  { file: 'src/app/page.js', keywords: ['MaxMetall', 'нержавеющей стали', 'Бишкек'] }
+const keywordChecks = [{
+    file: 'src/utils/seo.js',
+    keywords: ['нержавейка', 'MaxMetall', 'Бишкек', 'перила', 'ограждения']
+  },
+  {
+    file: 'src/components/Footer.js',
+    keywords: ['нержавеющей стали', 'изделия', 'производство']
+  },
+  {
+    file: 'src/app/page.js',
+    keywords: ['MaxMetall', 'нержавеющей стали', 'Бишкек']
+  }
 ];
 
 keywordChecks.forEach(check => {
   if (fs.existsSync(check.file)) {
     const content = fs.readFileSync(check.file, 'utf8');
     const foundKeywords = check.keywords.filter(keyword => content.includes(keyword));
-    
+
     totalChecks++;
     if (foundKeywords.length >= check.keywords.length * 0.8) {
       success(`${path.basename(check.file)} - good keyword coverage (${foundKeywords.length}/${check.keywords.length})`);
@@ -142,7 +150,7 @@ keywordChecks.forEach(check => {
 });
 
 console.log(`\n${colors.bold}📱 Technical SEO Check${colors.reset}`);
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 
 // Проверка технических аспектов
 checkFileContent(
@@ -164,7 +172,7 @@ checkFileContent(
 );
 
 console.log(`\n${colors.bold}🌟 SEO Score Summary${colors.reset}`);
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 
 const percentage = Math.round((score / totalChecks) * 100);
 const getScoreColor = (score) => {
@@ -184,7 +192,7 @@ if (percentage >= 90) {
 }
 
 console.log(`\n${colors.bold}📝 SEO Recommendations${colors.reset}`);
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 
 const recommendations = [
   '1. Ensure all meta tags are properly filled',
@@ -204,7 +212,7 @@ recommendations.forEach(rec => {
 });
 
 console.log(`\n${colors.bold}🔗 Useful Tools${colors.reset}`);
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 
 const tools = [
   'Google Search Console: https://search.google.com/search-console',

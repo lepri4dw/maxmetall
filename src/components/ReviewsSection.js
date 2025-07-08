@@ -109,26 +109,26 @@ const ReviewsSection = () => {
         {
             id: 3,
             author: 'MaxMetall',
-            text: 'Объект АУЦА Перила из нержавейки',
-            videoUrl: 'https://youtube.com/shorts/ZQiJcDowpYI',
+            text: 'Обьект "Usta" Ограждения из нержавейки',
+            videoUrl: 'https://youtube.com/shorts/2L4-yKxm7Bg',
         },
         {
             id: 4,
             author: 'MaxMetall',
-            text: 'Отзыв "Карниз для ванной" от клиента',
-            videoUrl: 'https://youtube.com/shorts/0d-rrdjc_Pw',
+            text: 'Честный отзыв "Лестница для бассейна"',
+            videoUrl: 'https://youtube.com/shorts/KMMvr7T_nY0',
         },
         {
             id: 5,
             author: 'MaxMetall',
-            text: 'Объект АУЦА Перила из нержавейки',
-            videoUrl: 'https://youtube.com/shorts/ZQiJcDowpYI',
+            text: 'Объект Академия МВД Перила Флагштоки',
+            videoUrl: 'https://youtube.com/shorts/mk_280MIjgQ',
         },
         {
             id: 6,
             author: 'MaxMetall',
-            text: 'Отзыв "Карниз для ванной" спустя 3 года',
-            videoUrl: 'https://youtube.com/shorts/aCN1kxjy2X4',
+            text: 'Отзыв "Карниз для ванной" от клиента',
+            videoUrl: 'https://youtube.com/shorts/0d-rrdjc_Pw',
         },
     ];
 

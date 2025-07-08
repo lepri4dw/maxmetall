@@ -71,8 +71,6 @@ const Header = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                bgcolor: '#000',
-                p: '10px',
               }}
             >
               <Image

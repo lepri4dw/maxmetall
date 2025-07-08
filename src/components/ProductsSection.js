@@ -321,7 +321,102 @@ const ProductsSection = () => {
                         })}
                     </Swiper>
 
-                    {/* ... остальной код навигации и CTA без изменений ... */}
+                    {/* Кастомные навигационные кнопки */}
+                    <Box
+                        className="swiper-button-prev-products"
+                        sx={{
+                            position: 'absolute',
+                            top: '45%',
+                            left: {xs: 10, md: -40},
+                            transform: 'translateY(-50%)',
+                            zIndex: 2,
+                            width: {xs: 40, md: 50},
+                            height: {xs: 40, md: 50},
+                            bgcolor: 'white',
+                            borderRadius: '50%',
+                            boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
+                            display: {xs: isSmallMobile ? 'none' : 'flex', md: 'flex'},
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                                bgcolor: theme.palette.primary.main,
+                                color: 'white',
+                                boxShadow: '0 6px 18px rgba(211, 47, 47, 0.25)',
+                            },
+                            '&:after': {
+                                content: '"❮"',
+                                fontSize: '18px',
+                                fontWeight: 'bold',
+                            },
+                        }}
+                    />
+
+                    <Box
+                        className="swiper-button-next-products"
+                        sx={{
+                            position: 'absolute',
+                            top: '45%',
+                            right: {xs: 10, md: -40},
+                            transform: 'translateY(-50%)',
+                            zIndex: 2,
+                            width: {xs: 40, md: 50},
+                            height: {xs: 40, md: 50},
+                            bgcolor: 'white',
+                            borderRadius: '50%',
+                            boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
+                            display: {xs: isSmallMobile ? 'none' : 'flex', md: 'flex'},
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                                bgcolor: theme.palette.primary.main,
+                                color: 'white',
+                                boxShadow: '0 6px 18px rgba(211, 47, 47, 0.25)',
+                            },
+                            '&:after': {
+                                content: '"❯"',
+                                fontSize: '18px',
+                                fontWeight: 'bold',
+                            },
+                        }}
+                    />
+
+                    {/* Кастомная пагинация */}
+                    <Box
+                        className="swiper-pagination-products"
+                        sx={{
+                            position: 'absolute',
+                            bottom: '10px !important',
+                            left: '50% !important',
+                            transform: 'translateX(-50%) !important',
+                            display: 'flex !important',
+                            justifyContent: 'center !important',
+                            alignItems: 'center !important',
+                            gap: '8px !important',
+                            width: 'auto !important',
+                            height: 'auto !important',
+                            zIndex: 10,
+                            '& .swiper-pagination-bullet': {
+                                backgroundColor: 'rgba(0, 0, 0, 0.3) !important',
+                                opacity: '1 !important',
+                                width: '10px !important',
+                                height: '10px !important',
+                                borderRadius: '50% !important',
+                                transition: 'all 0.3s ease !important',
+                                margin: '0 4px !important',
+                                cursor: 'pointer !important',
+                                border: 'none !important',
+                                outline: 'none !important',
+                            },
+                            '& .swiper-pagination-bullet-active': {
+                                backgroundColor: `${theme.palette.primary.main} !important`,
+                                transform: 'scale(1.3) !important',
+                            },
+                        }}
+                    />
 
                 </Box>
             </Container>

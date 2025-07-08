@@ -19,8 +19,7 @@
     "kyrgyzstan",
     "bishkek"
   ],
-  "icons": [
-    {
+  "icons": [{
       "src": "/favicon.ico",
       "sizes": "16x16 32x32 48x48",
       "type": "image/x-icon"
@@ -86,8 +85,7 @@
       "type": "image/jpeg"
     }
   ],
-  "screenshots": [
-    {
+  "screenshots": [{
       "src": "/images/hero-bg.jpg",
       "sizes": "1920x1080",
       "type": "image/jpeg",
@@ -102,66 +100,55 @@
       "label": "MaxMetall - Главная страница мобильная"
     }
   ],
-  "shortcuts": [
-    {
+  "shortcuts": [{
       "name": "Наша продукция",
       "short_name": "Продукция",
       "description": "Просмотр каталога изделий из нержавеющей стали",
       "url": "/#products",
-      "icons": [
-        {
-          "src": "/images/products/railings.jpg",
-          "sizes": "192x192",
-          "type": "image/jpeg"
-        }
-      ]
+      "icons": [{
+        "src": "/images/products/railings.jpg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      }]
     },
     {
       "name": "Галерея работ",
       "short_name": "Галерея",
       "description": "Фотографии выполненных работ",
       "url": "/#gallery",
-      "icons": [
-        {
-          "src": "/images/gallery/square-1.jpg",
-          "sizes": "192x192",
-          "type": "image/jpeg"
-        }
-      ]
+      "icons": [{
+        "src": "/images/gallery/square-1.jpg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      }]
     },
     {
       "name": "Контакты",
       "short_name": "Контакты",
       "description": "Связаться с MaxMetall",
       "url": "/#contacts",
-      "icons": [
-        {
-          "src": "/images/favicon.jpg",
-          "sizes": "192x192",
-          "type": "image/jpeg"
-        }
-      ]
+      "icons": [{
+        "src": "/images/favicon.jpg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      }]
     },
     {
       "name": "Отзывы",
       "short_name": "Отзывы",
       "description": "Видео отзывы клиентов",
       "url": "/#reviews",
-      "icons": [
-        {
-          "src": "/images/favicon.jpg",
-          "sizes": "192x192",
-          "type": "image/jpeg"
-        }
-      ]
+      "icons": [{
+        "src": "/images/favicon.jpg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      }]
     }
   ],
-  "related_applications": [
-    {
-      "platform": "web",
-      "url": "https://maxmetall.kg"
-    }
-  ],
+  "related_applications": [{
+    "platform": "web",
+    "url": "https://maxmetall.kg"
+  }],
   "prefer_related_applications": false,
   "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9",
   "developer": {
@@ -173,8 +160,7 @@
     "camera",
     "geolocation"
   ],
-  "protocol_handlers": [
-    {
+  "protocol_handlers": [{
       "protocol": "tel",
       "url": "tel:+996555918355"
     },
@@ -191,22 +177,18 @@
       "title": "title",
       "text": "text",
       "url": "url",
-      "files": [
-        {
-          "name": "images",
-          "accept": ["image/*"]
-        }
-      ]
+      "files": [{
+        "name": "images",
+        "accept": ["image/*"]
+      }]
     }
   },
-  "file_handlers": [
-    {
-      "action": "/view-image",
-      "accept": {
-        "image/*": [".jpg", ".jpeg", ".png", ".gif", ".webp"]
-      }
+  "file_handlers": [{
+    "action": "/view-image",
+    "accept": {
+      "image/*": [".jpg", ".jpeg", ".png", ".gif", ".webp"]
     }
-  ],
+  }],
   "edge_side_panel": {
     "preferred_width": 400
   },
@@ -215,9 +197,12 @@
   },
   "handle_links": "preferred",
   "capture_links": "existing-client-navigate",
-  "scope_extensions": [
-    {"origin": "https://maxmetall.kg"},
-    {"origin": "https://www.maxmetall.kg"}
+  "scope_extensions": [{
+      "origin": "https://maxmetall.kg"
+    },
+    {
+      "origin": "https://www.maxmetall.kg"
+    }
   ],
   "display_override": [
     "window-controls-overlay",

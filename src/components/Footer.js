@@ -68,12 +68,10 @@ const Footer = () => {
                 <Box sx={{
                   width: 50,
                   height: 50,
-                  bgcolor: '#000',
                   borderRadius: 2,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  p: '10px',
                   overflow: 'hidden',
                 }}>
                   <Image 

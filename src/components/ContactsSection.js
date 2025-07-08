@@ -261,12 +261,15 @@ const ContactsSection = () => {
                         <Typography
                           variant="body1"
                           sx={{
-                            color: theme.palette.text.primary,
-                            fontWeight: 500,
+                            fontWeight: 'bold',
                             mb: 0.5,
+                            background: 'linear-gradient(135deg, #d32f2f 0%, #424242 100%)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
                           }}
                         >
-                            Приезжать по предварительному звонку!
+                            ПРИЕЗЖАТЬ ПО ПРЕДВАРИТЕЛЬНОМУ ЗВОНКУ!
                         </Typography>
                         <Typography
                           variant="body2"
