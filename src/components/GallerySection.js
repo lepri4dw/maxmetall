@@ -49,6 +49,12 @@ const GallerySection = () => {
       title: 'Перила AUCA', 
       type: 'square' 
     },
+      {
+          src: '/images/gallery/square-5.jpg',
+          alt: 'Флагштоки из нержавеющей стали MaxMetall Бишкек',
+          title: 'Флагштоки',
+          type: 'square'
+      },
     { 
       src: '/images/gallery/square-2.jpg', 
       alt: 'Лестница в бассейн из нержавеющей стали MaxMetall Бишкек', 
