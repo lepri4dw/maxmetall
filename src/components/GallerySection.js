@@ -25,24 +25,74 @@ const GallerySection = () => {
     // Вертикальные фото (высокие) - соотношение примерно 3:4 или 2:3
     {
       src: '/images/gallery/vertical-1.jpg',
-      alt: 'Карниз для ванной',
+      alt: 'Карниз для ванной из нержавеющей стали MaxMetall Бишкек',
       title: 'Карниз для ванной',
       type: 'vertical'
     },
-    { src: '/images/gallery/vertical-2.jpg', alt: 'Перила для лестницы', title: 'Перила для лестницы', type: 'vertical' },
-    { src: '/images/gallery/vertical-3.jpg', alt: 'Флагштоки', title: 'Флагштоки', type: 'vertical' },
+    { 
+      src: '/images/gallery/vertical-2.jpg', 
+      alt: 'Перила для лестницы из нержавейки MaxMetall Бишкек', 
+      title: 'Перила для лестницы', 
+      type: 'vertical' 
+    },
+    { 
+      src: '/images/gallery/vertical-3.jpg', 
+      alt: 'Флагштоки из нержавеющей стали MaxMetall Бишкек', 
+      title: 'Флагштоки', 
+      type: 'vertical' 
+    },
     
     // Квадратные фото (1:1)
-    { src: '/images/gallery/square-1.jpg', alt: 'Перила для лестницы', title: 'Перила AUCA', type: 'square' },
-    { src: '/images/gallery/square-2.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'square' },
-    { src: '/images/gallery/square-3.jpg', alt: 'Карниз для ванной', title: 'Карниз для ванной', type: 'square' },
-    { src: '/images/gallery/square-4.jpg', alt: 'Капсула времени', title: 'Капсула времени', type: 'square' },
+    { 
+      src: '/images/gallery/square-1.jpg', 
+      alt: 'Перила для лестницы AUCA из нержавейки MaxMetall Бишкек', 
+      title: 'Перила AUCA', 
+      type: 'square' 
+    },
+    { 
+      src: '/images/gallery/square-2.jpg', 
+      alt: 'Лестница в бассейн из нержавеющей стали MaxMetall Бишкек', 
+      title: 'Лестница в бассейн', 
+      type: 'square' 
+    },
+    { 
+      src: '/images/gallery/square-3.jpg', 
+      alt: 'Карниз для ванной комнаты из нержавейки MaxMetall Бишкек', 
+      title: 'Карниз для ванной', 
+      type: 'square' 
+    },
+    { 
+      src: '/images/gallery/square-4.jpg', 
+      alt: 'Капсула времени из нержавеющей стали MaxMetall Бишкек', 
+      title: 'Капсула времени', 
+      type: 'square' 
+    },
     
     // Горизонтальные фото (широкие) - соотношение примерно 4:3 или 3:2
-    { src: '/images/gallery/horizontal-1.jpg', alt: 'Перила для лестницы', title: 'Перила для лестницы', type: 'horizontal' },
-    { src: '/images/gallery/horizontal-2.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'horizontal' },
-    { src: '/images/gallery/horizontal-3.jpg', alt: 'Лестница в бассейн', title: 'Лестница в бассейн', type: 'horizontal' },
-    { src: '/images/gallery/horizontal-4.jpg', alt: 'Поручни ЛОВЗ', title: 'Поручни ЛОВЗ', type: 'horizontal' },
+    { 
+      src: '/images/gallery/horizontal-1.jpg', 
+      alt: 'Перила для лестницы из нержавейки MaxMetall работы Бишкек', 
+      title: 'Перила для лестницы', 
+      type: 'horizontal' 
+    },
+    { 
+      src: '/images/gallery/horizontal-2.jpg', 
+      alt: 'Лестница в бассейн из нержавеющей стали MaxMetall проект Бишкек', 
+      title: 'Лестница в бассейн', 
+      type: 'horizontal' 
+    },
+    { 
+      src: '/images/gallery/horizontal-3.jpg', 
+      alt: 'Лестница в бассейн бассейновая из нержавейки MaxMetall Бишкек', 
+      title: 'Лестница в бассейн', 
+      type: 'horizontal' 
+    },
+    { 
+      src: '/images/gallery/horizontal-4.jpg', 
+      alt: 'Поручни ЛОВЗ для инвалидов из нержавеющей стали MaxMetall Бишкек', 
+      title: 'Поручни ЛОВЗ', 
+      type: 'horizontal' 
+    },
   ];
 
   const handleImageClick = (image) => {
@@ -62,13 +112,14 @@ const GallerySection = () => {
         <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
           <Typography
             variant="h2"
+            component="h2"
             sx={{
               fontWeight: 700,
               color: theme.palette.text.primary,
               mb: 2,
             }}
           >
-            Галерея работ
+            Галерея работ из нержавеющей стали
           </Typography>
           <Typography
             variant="h6"
@@ -79,7 +130,7 @@ const GallerySection = () => {
               lineHeight: 1.6,
             }}
           >
-            Качественные фотографии наших работ. Только наша продукция, только наши проекты.
+            Качественные фотографии наших работ. Только наша продукция, только наши проекты в Бишкеке.
           </Typography>
         </Box>
 

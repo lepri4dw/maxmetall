@@ -75,7 +75,7 @@ const Header = () => {
             >
               <Image
                 src="/images/favicon.jpg"
-                alt="MaxMetall Logo"
+                alt="MaxMetall логотип - изделия из нержавеющей стали Бишкек"
                 width={50}
                 height={50}
                 style={{

@@ -65,13 +65,14 @@ const ContactsSection = () => {
         <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 } }}>
           <Typography
             variant="h2"
+            component="h2"
             sx={{
               fontWeight: 700,
               color: theme.palette.text.primary,
               mb: 2,
             }}
           >
-            Контакты
+            Контакты MaxMetall
           </Typography>
           <Typography
             variant="h6"
@@ -82,7 +83,7 @@ const ContactsSection = () => {
               lineHeight: 1.6,
             }}
           >
-            Свяжитесь с нами для консультации или размещения заказа
+            Свяжитесь с нами для консультации или размещения заказа на изделия из нержавеющей стали
           </Typography>
         </Box>
 

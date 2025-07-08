@@ -39,6 +39,7 @@ const LogoSlider = () => {
         <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 5 } }}>
           <Typography
             variant="h2"
+            component="h2"
             sx={{
               fontWeight: 700,
               color: theme.palette.text.primary,
@@ -127,7 +128,7 @@ const LogoSlider = () => {
                     {/* Попытка загрузить изображение логотипа */}
                     <Image
                       src={partner.logo}
-                      alt={partner.name}
+                      alt={`${partner.name} партнер MaxMetall изделия из нержавейки Бишкек`}
                       width={120}
                       height={60}
                       style={{

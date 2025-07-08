@@ -139,13 +139,14 @@ const ReviewsSection = () => {
                 <Box sx={{textAlign: 'center', mb: {xs: 5, md: 7}}}>
                     <Typography
                         variant="h2"
+                        component="h2"
                         sx={{
                             fontWeight: 700,
                             color: theme.palette.text.primary,
                             mb: 2,
                         }}
                     >
-                        Видео наших работ
+                        Видео наших работ из нержавеющей стали
                     </Typography>
                     <Typography
                         variant="h6"
