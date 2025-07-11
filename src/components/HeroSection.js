@@ -153,7 +153,7 @@ const HeroSection = () => {
                 }} 
               />
             }
-            onClick={() => window.open('https://wa.me/996555918355', '_blank')}
+            onClick={() => window.open('https://wa.me/996555033377', '_blank')}
             sx={{
               py: 1.8,
               px: { xs: 4, md: 5 },

@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/996555918355', '_blank');
+    window.open('https://wa.me/996555033377', '_blank');
   };
 
   const handleInstagramClick = () => {

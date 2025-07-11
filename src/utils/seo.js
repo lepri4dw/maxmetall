@@ -168,7 +168,7 @@ export const generateMainPageJsonLd = () => {
     },
     sameAs: [
       'https://instagram.com/maxmetall.kg',
-      'https://wa.me/996555918355'
+      'https://wa.me/996555033377'
     ],
     aggregateRating: {
       '@type': 'AggregateRating',

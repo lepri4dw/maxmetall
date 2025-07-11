@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/996555918355', '_blank');
+    window.open('https://wa.me/996555033377', '_blank');
   };
 
   const scrollToSection = (sectionId) => {
@@ -137,7 +137,7 @@ const Header = () => {
                   fontSize: { sm: '1rem', md: '1.2rem' }
                 }}
               >
-                +996 555 918 355
+                  +996 555 918 355
               </Typography>
             )}
             

@@ -8,6 +8,7 @@ import ReviewsSection from '../components/ReviewsSection';
 import LogoSlider from '../components/LogoSlider';
 import ContactsSection from '../components/ContactsSection';
 import Footer from '../components/Footer';
+import WhatsAppFloat from '../components/WhatsAppFloat';
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
         <ContactsSection />
       </main>
       <Footer />
+      
+      {/* Плавающая кнопка WhatsApp Business */}
+      <WhatsAppFloat />
     </>
   );
 }
