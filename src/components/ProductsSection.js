@@ -118,7 +118,7 @@ const ProductsSection = () => {
                             mb: 2,
                         }}
                     >
-                        Наша продукция из нержавеющей стали
+                        Нержавейка в Бишкеке - наша продукция
                     </Typography>
                     <Typography
                         variant="h6"
@@ -213,7 +213,7 @@ const ProductsSection = () => {
                                         >
                                             <Image
                                                 src={product.image}
-                                                alt={`${product.title} из нержавеющей стали Бишкек MaxMetall`}
+                                                alt={`Нержавейка Бишкек - ${product.title} из нержавеющей стали Бишкек MaxMetall`}
                                                 fill
                                                 style={{
                                                     objectFit: 'cover',
